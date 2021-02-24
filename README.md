@@ -1,21 +1,8 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f4455669-0ce8-40ea-8ff5-5c31f0aadfa5/deploy-status)](https://app.netlify.com/sites/skeleventy/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d35f4967-270a-43b4-974e-e27fd87fd467/deploy-status)](https://app.netlify.com/sites/backstage-openmic/deploys)
 
-# An Eleventy starter skeleton
+# Backstage Open Mic website
 
-Skeleventy gives you a rock solid foundation to build fast and accessible static websites. [View the demo site](http://skeleventy.netlify.app/).
-
-## Features
-
-- A clean, minimal build pipeline with SCSS and [Laravel Mix](https://laravel-mix.com/docs/5.0/basic-example) for compiling assets
-- [Gorko](https://github.com/hankchizljaw/gorko), a smart little Sass-powered utility class generator
-- [Purgecss](https://purgecss.com/) to remove unused CSS
-- HTML minifier
-- Supports ES2017 JavaScript, with Babel compilation
-- SEO friendly page meta, including Open Graph and Twitter
-- Image lazy loading
-- Mobile navigation
-- XML Sitemap
-- Clean and simple blog, with categories and featured images
+This page is build with 11ty, based on [skeleventy project template](https://github.com/josephdyer/skeleventy).
 
 ## Getting started
 
@@ -57,17 +44,9 @@ You'll find the site's uncompiled SCSS and JS within `resources/` where Mix will
 - A typographic scale has already been set up using my personal favourite _Major Third_ scale.
 - **Tip:** *for more scales, check out [Type Scale](https://type-scale.com/)*
 
-### Gorko
-
-I decided to remove Tailwind in favour of Gorko, purely for its simplicity and maintainability (especially for newer developers). Not having _too much_ to begin with and adding in what you need, will lead to a simpler, more maintainable codebase. Gorko lets you add a sprinkle of reusable utility classes to help keep your code DRY. _Credit to [Andy Bell](https://piccalil.li/) for making this handy little tool_
-
 ### JavaScript
 
 - `utilities/` contains any global utility/helper functions
 - `modules/` contains your site's actual JavaScript, all kept neat and tidy within their respective _modular_ subfolders
 - You can import these subfolders into `main.js` using `import '@modules/example-module'`
 - **Tip:** *you can set up optional import aliases via the `webpack.mix.js` file*
-
-### A note on responsive images
-
-Skeleventy doesn't have responsive images baked in, the main reason being: it's best using [CDN](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/zsykhj88yzvi0i8kugfs). Check out this [tutorial on setting up Eleventy with Cloudinary](https://sia.codes/posts/eleventy-and-cloudinary-images/).
