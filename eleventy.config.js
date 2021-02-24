@@ -71,6 +71,7 @@ module.exports = config => {
     config.addPassthroughCopy('css')
     config.addPassthroughCopy('js')
     config.addPassthroughCopy('images')
+    config.addPassthroughCopy('fonts')
     config.addPassthroughCopy('favicon.png')
     config.addPassthroughCopy('favicon.svg')
 

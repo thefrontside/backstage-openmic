@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Teriyake';
+    src: url('/fonts/Teriyake-Bold.woff2') format('woff2'),
+        url('/fonts/Teriyake-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Teriyake';
+    src: url('/fonts/Teriyake-Black.woff2') format('woff2'),
+        url('/fonts/Teriyake-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Teriyake';
+    src: url('/fonts/Teriyake-SemiBold.woff2') format('woff2'),
+        url('/fonts/Teriyake-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Teriyake';
+    src: url('/fonts/Teriyake-Regular.woff2') format('woff2'),
+        url('/fonts/Teriyake-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
