@@ -1,0 +1,93 @@
+@mixin gradient-bar($height: 2px, $reduced-accent: false) {
+    display: block;
+    height: $height;
+    width: 100%;
+    @if $reduced-accent {
+        background: linear-gradient(90deg, get-color('secondary'), get-color('fs-skyblue'), get-color('fs-pink') 120%);
+    } @else {
+        background: linear-gradient(90deg, get-color('secondary'), get-color('fs-skyblue'), get-color('fs-pink'));
+
+    }
+}
+
+.gradient-line {
+    &:before {
+        content: '';
+        @include gradient-bar(4px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        filter: blur(10px);
+    }
+    @include gradient-bar();
+    position: relative;
+    outline: none;
+    border: none;
+}
+
+.gradient-line__gloomy {
+    &:before {
+        content: '';
+        @include gradient-bar(3px, true);
+        filter: blur(5);
+    }
+    &:after {
+        content: '';
+        @include gradient-bar(2px, true);
+        position: absolute;
+        left: 0;
+        top: 0;
+        filter: blur(3px);
+    }
+    @include gradient-bar(1px, true);
+}
+
+.scrolling-text {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-text > div {
+    width: 400%;
+    height: 95px;
+    min-width: 5320px;
+  
+    position: absolute;
+    overflow: hidden;
+}
+
+.scrolling-text--item {
+    float: left;
+    width: 25%;
+    min-width: 1330px;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .scrolling-text > div {
+        animation: marquee 60s linear infinite;
+    }
+}
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -200%; }
+}
+
+.stroke-text {
+    font-size: 70px;
+    text-align: center;
+    text-anchor: middle;
+    font-family: "Terikaye", sans-serif;
+    font-weight: 900;
+    stroke: #36ace5;
+    stroke-width: 2px;
+    fill: get-color('primary');
+    paint-order: stroke fill;
+    text-shadow: 0 0 10px rgba(get-color('secondary'), 0.6);
+    @include safari-only {
+        text-shadow: 0 0 5px rgba(get-color('secondary'), 0.3);
+    }
+}
+

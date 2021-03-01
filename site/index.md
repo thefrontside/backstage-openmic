@@ -1,9 +1,9 @@
 ---
 layout: home
-meta_title: Home
-meta_description: Skeleventy gives you a rock solid foundation to build fast and accessible static websites.
-title: An Eleventy starter skeleton
-sub_heading: Skeleventy gives you a rock solid foundation to build fast and accessible static websites.
+meta_title: Next Event
+meta_description: Backstage Open Mic is a monthly event where the community gathers to share experiences.
+title: A community of people building developer portals
+sub_heading: We’re a regular get together of Backstage users sharing their experiences and helping each other
 eleventyNavigation:
   key: Home
   order: 1

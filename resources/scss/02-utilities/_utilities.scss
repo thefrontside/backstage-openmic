@@ -6,8 +6,8 @@
     @include apply-utility('width', 'full');
     margin: 0 auto;
     max-width: v(max-width);
-    @include apply-utility('pl', '600');
-    @include apply-utility('pr', '600');
+    @include apply-utility('pl', '800');
+    @include apply-utility('pr', '800');
 }
 
 // better vertical rhythm
@@ -42,3 +42,8 @@
     border-width: 0;
 }
 
+.inline-img-decor {
+    display: inline-block;
+    height: 0.8em;
+    vertical-align: middle;
+} 

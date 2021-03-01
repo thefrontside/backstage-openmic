@@ -2,24 +2,70 @@
 layout: base
 ---
 
-<main id="main" class="main inner box-flex pt-800 pb-1100" tabindex="-1">
-
-    <header class="page-header">
-
-        <h1 class="page-title">{{ title }}</h1>
-
-        {% if sub_heading %}
-
-            <p class="sub-heading">{{ sub_heading }}</p>
-
-        {% endif %}
-
+<main id="main" class="main inner box-flex pt-800 pb-800" tabindex="-1">
+    <header class="hero page-header laptop:box-flex">
+        <div class="laptop:width-half pr-1000 pb-1000">
+            <h1 class="hero--title">
+                A community of people building <img src="/images/portal-icon.png" alt="" class="inline-img-decor" /> developer portals
+            </h1>
+            <p class="hero--description">{{ sub_heading }}</p>
+            <span class="gradient-line mt-1000 mb-800"></span>
+            <h3 class="mb-500">Featuring <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
+            <div class="box-flex">
+                <div class="featured-speaker width-half">
+                    <div class="speaker-avatar">
+                        <img src="/images/speakers/elton-john.png" alt="Speaker portrait" class="speaker-avatar--speaker-pic" />
+                        <img src="/images/logos/frontside.png" alt="Company logo" class="speaker-avatar--company-icon" />
+                    </div>
+                    <div>
+                        <strong class="featured-speaker--name">Elton John</strong>
+                        <em class="featuring-speaker--role">Role at company</em>
+                    </div>
+                </div>
+                <div class="featured-speaker width-half">
+                    <div class="speaker-avatar">
+                        <img src="/images/speakers/lady-gaga.png" alt="Speaker portrait" class="speaker-avatar--speaker-pic" />
+                        <img src="/images/logos/frontside.png" alt="Company logo" class="speaker-avatar--company-icon" />
+                    </div>
+                    <div>
+                        <strong class="featured-speaker--name">Lady Gaga</strong>
+                        <em class="featuring-speaker--role">Role at company</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="laptop:width-half hero-illustration">
+            <img src="/images/hero-header@1.5x.png" alt="" />
+        </div>
     </header>
-
-    <div class="content flow">
+    {# <div class="content flow">
 
         {{ content | safe }}
 
-    </div>
-
+    </div> #}
 </main>
+
+<div class="home-nextshow-banner">
+    <span class="gradient-line gradient-line__gloomy"></span>
+    <div class="scrolling-text">
+        <div>
+            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%">
+                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: MARCH 24TH @ 9am EST</text>
+            </svg>
+            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%">
+                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: 24TH OF MARCH @ 15h CET</text>
+            </svg>
+            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%">
+                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: MARCH 24TH @ 9am EST</text>
+            </svg>
+            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%">
+                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: 24TH OF MARCH @ 15h CET</text>
+            </svg>
+        </div>
+    </div>
+    <span class="gradient-line gradient-line__gloomy"></span>
+</div>
+
+<h3>
+life goes on
+</h3>

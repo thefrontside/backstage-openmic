@@ -1,3 +1,11 @@
 
 //==========  Mixins  ==========//
 
+// Query from https://browserstrangeness.bitbucket.io/css_hacks.html#safari
+@mixin safari-only {
+    @media not all and (min-resolution:.001dpcm) {
+        @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+            @content;
+        }
+    }
+}

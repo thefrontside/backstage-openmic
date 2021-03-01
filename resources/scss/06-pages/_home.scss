@@ -1,2 +1,39 @@
 
 //========== Homepage ==========//
+.home-nextshow-banner {
+    opacity: 0.95;
+}
+
+.featured-speaker {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+
+    &--name {
+        display: block;
+    }
+    em {
+        font-style: normal;
+    }
+    > .speaker-avatar {
+        margin-right: 10px;
+    }
+}
+
+.speaker-avatar {
+    position: relative;
+
+    &--speaker-pic {
+        width: 70px;
+        border-radius: 10px;
+    }
+
+    &--company-icon {
+        position: absolute;
+        top: 10px;
+        left: -15px;
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,2 +1,14 @@
 
 //==========  Hero  ==========//
+.hero {
+   align-items: center;
+}
+
+.hero--title {
+    font-size: var(--text-900);
+}
+
+.hero--description {
+    font-size: var(--text-700);
+    line-height: 1.2;
+}

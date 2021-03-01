@@ -1,9 +1,8 @@
 {
-    "name": "Skeleventy",
-    "url": "https://skeleventy.netlify.app",
+    "name": "Backstage Open Mic",
+    "url": "https://backstage-openmic.netlify.app",
     "author": {
-        "name": "Mill Burray",
-        "handle": "@joe_dyer1"
+        "name": "Frontside Software, Inc"
     },
     "images": {
         "favicon": "/favicon.png",
