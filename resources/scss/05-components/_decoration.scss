@@ -1,4 +1,4 @@
-@mixin gradient-bar($height: 2px, $reduced-accent: false) {
+@mixin gradient-bar($height: 1px, $reduced-accent: false) {
     display: block;
     height: $height;
     width: 100%;
@@ -49,10 +49,12 @@
     position: relative;
 }
 
+$scrolling-item-width: 1024px;
+
 .scrolling-text > div {
-    width: 400%;
+    width: 200%;
     height: 95px;
-    min-width: 5320px;
+    min-width: $scrolling-item-width * 4;
   
     position: absolute;
     overflow: hidden;
@@ -61,12 +63,13 @@
 .scrolling-text--item {
     float: left;
     width: 25%;
-    min-width: 1330px;
+    min-width: $scrolling-item-width;
+    height: 140px;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
     .scrolling-text > div {
-        animation: marquee 60s linear infinite;
+        animation: marquee 80s linear infinite;
     }
 }
 
@@ -76,7 +79,8 @@
 }
 
 .stroke-text {
-    font-size: 70px;
+    font-size: 50px;
+    line-height: 1;
     text-align: center;
     text-anchor: middle;
     font-family: "Terikaye", sans-serif;
@@ -91,3 +95,12 @@
     }
 }
 
+.button-with-pointer {
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    img {
+        height: var(--text-900);
+        margin-left: get-size('400');
+    }
+}
