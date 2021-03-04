@@ -69,7 +69,10 @@ $scrolling-item-width: 1024px;
 
 @media screen and (prefers-reduced-motion: no-preference) {
     .scrolling-text > div {
-        animation: marquee 80s linear infinite;
+        animation: marquee 15s linear infinite;
+        @include media-query('tablet') {
+            animation: marquee 80s linear infinite;
+        }
     }
 }
 

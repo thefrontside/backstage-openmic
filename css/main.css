@@ -855,6 +855,10 @@
   padding-right: 2.44rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .flow > * + * {
   margin-top: var(--gap);
 }
@@ -1071,6 +1075,10 @@ a:not([class]):hover {
   color: #121212;
 }
 
+.nav-link-rsvp {
+  border-bottom: 1px solid #121212;
+}
+
 .mobile-nav {
   --transition-duration: .3s;
   position: fixed;
@@ -1282,6 +1290,12 @@ a:not([class]):hover {
 
 @media screen and (prefers-reduced-motion: no-preference) {
   .scrolling-text > div {
+    -webkit-animation: marquee 15s linear infinite;
+            animation: marquee 15s linear infinite;
+  }
+}
+@media screen and (prefers-reduced-motion: no-preference) and (min-width : 48em) {
+  .scrolling-text > div {
     -webkit-animation: marquee 80s linear infinite;
             animation: marquee 80s linear infinite;
   }
@@ -1457,7 +1471,7 @@ a:not([class]):hover {
 .speaker-avatar__talk .speaker-avatar--speaker-pic {
   width: 110px;
   border-radius: 10px;
-  border: 1px solid #f037a5;
+  border: 1px solid #9bf0e1;
   margin-bottom: 1.25rem;
 }
 .speaker-avatar__talk .speaker-avatar--company-icon {
@@ -1536,6 +1550,15 @@ a:not([class]):hover {
   font-size: 0.8em;
 }
 
+.talks-list {
+  margin-top: 1.25rem;
+}
+@media (min-width : 64em) {
+  .talks-list {
+    margin-top: 4.76rem;
+  }
+}
+
 .talks-item {
   margin-bottom: 2.44rem;
 }
@@ -1565,7 +1588,7 @@ a:not([class]):hover {
 .talk-box:after {
   content: "";
   display: block;
-  background: linear-gradient(90deg, #f037a5 5%, #26abe8 50%, #9bf0e1);
+  background: linear-gradient(90deg, #9bf0e1 50%, #26abe8 80%, #f037a5);
   position: absolute;
   top: -1px;
   left: -1px;
@@ -1588,9 +1611,9 @@ a:not([class]):hover {
   }
   .talk-time:before {
     content: "";
-    width: 100%;
+    width: 20%;
     height: 1px;
-    background: #9bf0e1;
+    background: linear-gradient(90deg, #f037a5, #26abe8);
     position: absolute;
     top: 50%;
     left: 0;

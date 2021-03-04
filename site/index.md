@@ -3,7 +3,7 @@ layout: home
 meta_title: Next Event
 meta_description: Backstage Open Mic is a monthly event where the community gathers to share experiences.
 title: A community of people building developer portals
-sub_heading: We’re a regular get together of Backstage users sharing their experiences and helping each other
+sub_heading: We’re a monthly get together of Backstage users sharing their experiences and helping each other
 eleventyNavigation:
   key: Home
   order: 1

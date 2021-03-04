@@ -55,7 +55,7 @@
     .speaker-avatar--speaker-pic {
         width: 110px;
         border-radius: 10px;
-        border: 1px solid get-color('fs-pink');
+        border: 1px solid get-color('secondary');
         margin-bottom: get-size('500');
     }
     .speaker-avatar--company-icon {
@@ -141,6 +141,13 @@
     }
 }
 
+.talks-list {
+    margin-top: get-size('500');
+    @include media-query('laptop') {
+        margin-top: get-size('1100');
+    }
+}
+
 .talks-item {
     margin-bottom: get-size('800');
     @include media-query('laptop') {
@@ -169,8 +176,8 @@
     &:after {
         content: '';
         display: block;
-        // background: linear-gradient(90deg, get-color('secondary') 50%, get-color('fs-skyblue') 80%, get-color('fs-pink'));
-        background: linear-gradient(90deg, get-color('fs-pink') 5%, get-color('fs-skyblue') 50%, get-color('secondary'));
+        background: linear-gradient(90deg, get-color('secondary') 50%, get-color('fs-skyblue') 80%, get-color('fs-pink'));
+        // background: linear-gradient(90deg, get-color('fs-pink') 5%, get-color('fs-skyblue') 50%, get-color('secondary'));
         position: absolute;
         top: -1px;
         left: -1px;
@@ -192,9 +199,9 @@
         position: relative;
         &:before {
             content: '';
-            width: 100%;
+            width: 20%;
             height: 1px;
-            background: get-color('secondary');
+            background: linear-gradient(90deg, get-color('fs-pink'), get-color('fs-skyblue'));
             position: absolute;
             top: 50%;
             left: 0;

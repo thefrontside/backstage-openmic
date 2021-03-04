@@ -1,6 +1,10 @@
 
 //==========  Mobile Nav  ==========//
 
+.nav-link-rsvp {
+    border-bottom: 1px solid get-color('primary');
+}
+
 .mobile-nav {
     --transition-duration: .3s;
     position: fixed;
