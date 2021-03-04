@@ -19,7 +19,7 @@ mix
     })
 
     // Compile Javascript
-    .js('resources/js/main.js', 'js/')
+    // .js('resources/js/main.js', 'js/')
 
     // Compile SCSS
     .sass('resources/scss/main.scss', 'css/')
@@ -32,7 +32,8 @@ if ( mix.inProduction() )
 
     // Purge our CSS
     // mix minifies CSS & JS by default
-    mix.purgeCss({
+    mix
+    .purgeCss({
             content: ['site/**/*.njk'],
             safelist: ['menu-visible', 'loaded', 'expanded', /^type-/, /^page-/, /[data-src]/],
             extractorPattern: [/[^<>"'`\s]*[^<>"'`\s:]/g]

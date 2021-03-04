@@ -20,56 +20,56 @@ module.exports = config => {
     // Minify our HTML
     config.addTransform('htmlminify', require('./utilities/transforms/htmlminify'))
 
-    // Collections
-    config.addCollection('blog', collection => {
+    // // Collections
+    // config.addCollection('blog', collection => {
 
-        const blogs = collection.getFilteredByTag('blog')
+    //     const blogs = collection.getFilteredByTag('blog')
 
-        for ( let i = 0; i < blogs.length; i++ ) {
+    //     for ( let i = 0; i < blogs.length; i++ ) {
 
-            const previous_post = blogs[i - 1]
-            const next_post = blogs[i + 1]
+    //         const previous_post = blogs[i - 1]
+    //         const next_post = blogs[i + 1]
 
-            blogs[i].data['previous_post'] = previous_post
-            blogs[i].data['next_post'] = next_post
+    //         blogs[i].data['previous_post'] = previous_post
+    //         blogs[i].data['next_post'] = next_post
 
-        }
+    //     }
 
-        return blogs.reverse()
+    //     return blogs.reverse()
 
-    })
+    // })
 
-    // Categories collection
-    config.addCollection('categories', collection => {
+    // // Categories collection
+    // config.addCollection('categories', collection => {
 
-        const list = new Set()
+    //     const list = new Set()
 
-        collection.getAll().forEach(item => {
+    //     collection.getAll().forEach(item => {
 
-            if (!item.data.tags) return
+    //         if (!item.data.tags) return
 
-            item.data.tags
-                .filter(category => !['blog', 'all'].includes(category))
-                .forEach(category => list.add(category))
+    //         item.data.tags
+    //             .filter(category => !['blog', 'all'].includes(category))
+    //             .forEach(category => list.add(category))
 
-        })
+    //     })
 
-        return Array.from(list).sort()
+    //     return Array.from(list).sort()
 
-    })
+    // })
 
     // Layout aliases
     config.addLayoutAlias('base', 'layouts/base.njk')
     config.addLayoutAlias('home', 'layouts/home.njk')
     config.addLayoutAlias('page', 'layouts/page.njk')
-    config.addLayoutAlias('blog', 'layouts/blog.njk')
-    config.addLayoutAlias('post', 'layouts/post.njk')
-    config.addLayoutAlias('contact', 'layouts/contact.njk')
-    config.addLayoutAlias('category', 'layouts/category.njk')
+    // config.addLayoutAlias('blog', 'layouts/blog.njk')
+    // config.addLayoutAlias('post', 'layouts/post.njk')
+    // config.addLayoutAlias('contact', 'layouts/contact.njk')
+    // config.addLayoutAlias('category', 'layouts/category.njk')
 
     // Include our static assets
     config.addPassthroughCopy('css')
-    config.addPassthroughCopy('js')
+    // config.addPassthroughCopy('js')
     config.addPassthroughCopy('images')
     config.addPassthroughCopy('fonts')
     config.addPassthroughCopy('favicon.png')
