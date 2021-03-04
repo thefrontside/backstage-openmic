@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ meta_title if meta_title else title }} | {{ site.name }}</title>
 
-    {# include main.css if in development mode #}
-    {% if helpers.environment === 'development' %}
-        <link rel="stylesheet" href="/css/main.css">
-    {% else %}
-        <link rel="stylesheet" href="/css/main.min.css">
-    {% endif %}
+    <link rel="stylesheet" href="/css/main.css">
 
     {# include javascript #}
     {# <script src="/js/{{ 'main.js' if helpers.environment === 'development' else 'main.min.js' }}" defer></script> #}
