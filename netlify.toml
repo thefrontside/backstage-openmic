@@ -7,3 +7,12 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+  from = "/rfs"
+  to = "https://github.com/thefrontside/backstage-openmic/issues/new?assignees=&labels=talk-proposal&template=talk-proposal.md&title="
+
+[[redirects]]
+  from = "/talk"
+  to = "https://github.com/thefrontside/backstage-openmic/issues/new?assignees=&labels=talk-proposal&template=talk-proposal.md&title="
+  
