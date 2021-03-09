@@ -16,3 +16,7 @@
   from = "/talk"
   to = "https://github.com/thefrontside/backstage-openmic/issues/new?assignees=&labels=talk-proposal&template=talk-proposal.md&title="
   
+[[redirects]]
+  from = "/rsvp"
+  to = "  https://frontside-software.typeform.com/to/ICn2IRZM"
+  

@@ -92,6 +92,7 @@ $scrolling-item-width: 1024px;
     stroke-width: 2px;
     fill: get-color('primary');
     paint-order: stroke fill;
+    text-transform: uppercase;
     text-shadow: 0 0 10px rgba(get-color('secondary'), 0.6);
     @include safari-only {
         text-shadow: 0 0 5px rgba(get-color('secondary'), 0.3);

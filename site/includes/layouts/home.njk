@@ -45,32 +45,16 @@ layout: base
     </div> #}
 </main>
 
+
 <div class="home-nextshow-banner mb-1000">
-    <span class="gradient-line gradient-line__gloomy"></span>
-    <div class="scrolling-text">
-        <div>
-            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: MARCH 24TH @ 9am EST</text>
-            </svg>
-            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: 24TH OF MARCH @ 15h CET</text>
-            </svg>
-            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: MARCH 24TH @ 9am EST</text>
-            </svg>
-            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: 24TH OF MARCH @ 15h CET</text>
-            </svg>
-        </div>
-    </div>
-    <span class="gradient-line gradient-line__gloomy"></span>
+    {% include "components/nextshow-banner.njk" %}
 </div>
 
 <div class="main inner box-flex pt-800 pb-800">
     <div class="agenda-header laptop:box-flex">
         <h2 class="agenda-title green-banner" id="agenda">
             <a href="#agenda" class="color-secondary">
-                Agenda: March 24th, 2021 / ONLINE / 60 mins
+                Agenda: {{ eventMonth  }} {{ eventDay  }}th / ONLINE / 60 mins
             </a>
         </h2>
         <div class="hosted-by mt-800">
@@ -125,7 +109,7 @@ layout: base
         <p>
             Join us!
         </p>
-        <a href="#rsvp" class="button-with-pointer">
+        <a href="/rsvp" class="button-with-pointer">
             <span class="button">
                 RSVP
             </span>
@@ -135,31 +119,13 @@ layout: base
 </div>
 
 <div class="home-nextshow-banner mt-1000 mb-1000">
-    <span class="gradient-line gradient-line__gloomy"></span>
-    <div class="scrolling-text">
-        <div>
-            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: MARCH 24TH @ 9am EST</text>
-            </svg>
-            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: 24TH OF MARCH @ 15h CET</text>
-            </svg>
-            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: MARCH 24TH @ 9am EST</text>
-            </svg>
-            <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <text class="stroke-text" x="50%" y="50%">NEXT SHOW: 24TH OF MARCH @ 15h CET</text>
-            </svg>
-        </div>
-    </div>
-    <span class="gradient-line gradient-line__gloomy"></span>
+    {% include "components/nextshow-banner.njk" %}
 </div>
-
 
 <div class="main inner box-flex pt-800 pb-800 mb-1000">
     <div class="laptop:width-half">
         <h3 class="green-banner">
-            <a href="#talk" class="color-secondary">Propose a talk!</a>
+            <a href="/talk" class="color-secondary">Propose a talk!</a>
         </h3>
         <div class="pr-500 pl-500">
             <p class="mt-500">
@@ -168,7 +134,7 @@ layout: base
             <p class="mt-500">
                 Talks could be about things you have learned when adopting Backstage in your organization. Or, if you're a plugin author, this is a perfect space to present it to the community.
             </p>
-            <a href="#talk" class="button mt-500">
+            <a href="/talk" class="button mt-500">
                 Propose a talk
             </a>
         </div>
