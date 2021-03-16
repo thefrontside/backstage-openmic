@@ -33,5 +33,5 @@ speakerTwo:
   talkTitle: Getting started with the API docs plugin
   talkDescription: Dominik will show us how to use Backstage API docs plugin to discover our APIs and get rendered documentation from OpenAPI, AsyncAPI, and GraphQL schemas.
   talkTime: 12:20pm ET / 18:20 CET 
-  learnMore: https://github.com/thefrontside/backstage-openmic/issues/2
+  learnMore: https://github.com/thefrontside/backstage-openmic/issues/1
 ---
