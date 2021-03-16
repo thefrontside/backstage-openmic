@@ -9,7 +9,7 @@
         "favicon_svg": "/favicon.svg",
         "apple_touch_icon": "/images/meta/apple-touch-icon.png",
         "twitter": "/images/meta/twitter.jpg",
-        "og": "/images/meta/og-03-31.jpg"
+        "og": "/images/meta/og-03-31.png"
     },
     "social_links": {
         "github": "https://github.com/thefrontside/backstage-openmic"
