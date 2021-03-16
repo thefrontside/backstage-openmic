@@ -18,6 +18,7 @@ speakerOne:
   image: /images/speakers/iain-billet.png
   company: Roadie
   companyLogo: /images/logos/roadie.png
+  companyLink: https://roadie.io/
   talkTitle: Implementing Backstage at Roadie
   talkDescription: Iain will talk about Roadie's overall architecture, how they manage changes, and how those changes make it to production. He'll cover AWS, Terraform, Flux and Helm. There's even a demo at the end!
   talkTime: 12:00pm ET / 18:00 CET 
@@ -28,6 +29,7 @@ speakerTwo:
   image: /images/speakers/dominik-henneke.png
   company: SDA SE
   companyLogo: /images/logos/sda-se.png
+  companyLink: https://sda.se/
   talkTitle: Getting started with the API docs plugin
   talkDescription: Dominik will show us how to use Backstage API docs plugin to discover our APIs and get rendered documentation from OpenAPI, AsyncAPI, and GraphQL schemas.
   talkTime: 12:20pm ET / 18:20 CET 

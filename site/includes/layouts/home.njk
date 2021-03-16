@@ -83,13 +83,14 @@ layout: base
                         {{speakerOne.talkTitle}}
                     </h3>
                     <strong>
-                        {{ speakerOne.name }}, {{ speakerOne.title }} at {{ speakerOne.company }}
+                        {{ speakerOne.name }}, {{ speakerOne.title }}
+                        at <a href="{{ speakerOne.companyLink }}" target="_blank" rel="noopener">{{ speakerOne.company }}</a>
                     </strong>
                     <p class="mt-600 mb-500">
                         {{speakerOne.talkDescription}}
                     </p>
                     <p class="text-400">
-                        <a href="{{ speakerOne.learnMore }}">
+                        <a href="{{ speakerOne.learnMore }}"  target="_blank" rel="noopener nofollow">
                             Learn more on Github
                         </a>
                     </p>
@@ -112,13 +113,14 @@ layout: base
                         {{speakerTwo.talkTitle}}
                     </h3>
                     <strong>
-                        {{ speakerTwo.name }}, {{ speakerTwo.title }} at {{ speakerTwo.company }}
+                        {{ speakerTwo.name }}, {{ speakerTwo.title }}
+                        at <a href="{{ speakerTwo.companyLink }}" target="_blank" rel="noopener">{{ speakerTwo.company }}</a>
                     </strong>
                     <p class="mt-600 mb-500">
                         {{speakerTwo.talkDescription}}
                     </p>
                     <p class="text-400">
-                        <a href="{{ speakerTwo.learnMore }}">
+                        <a href="{{ speakerTwo.learnMore }}" target="_blank" rel="noopener nofollow">
                             Learn more on Github
                         </a>
                     </p>
@@ -155,7 +157,7 @@ layout: base
             <p class="mt-500">
                 Talks could be about things you have learned when adopting Backstage in your organization. Or, if you're a plugin author, this is a perfect space to present it to the community.
             </p>
-            <a href="/talk" class="button mt-500">
+            <a href="/talk" class="button mt-500" target="_blank" rel="noopener nofollow"> 
                 Propose a talk
             </a>
         </div>
