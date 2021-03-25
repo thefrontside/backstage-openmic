@@ -11,6 +11,7 @@
 <meta name="og:title" content="{{ meta_title if meta_title else title }}">
 <meta name="og:description" content="{{ meta_description | truncate(140) if meta_description else content | striptags | truncate(140) }}">
 <meta name="og:image" content="{{ site.url }}{{ site.images.og }}">
+<meta name="image" property="og:image" content="{{ site.url }}{{ site.images.og }}">
 <meta name="og:url" content="{{ site.url }}{{ page.url }}">
 <meta name="og:site_name" content="{{ site.name }}">
 <meta name="og:locale" content="en_GB">

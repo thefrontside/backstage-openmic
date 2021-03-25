@@ -11,7 +11,8 @@
     {# <script src="/js/{{ 'main.js' if helpers.environment === 'development' else 'main.min.js' }}" defer></script> #}
 
     {# page meta #}
-    <meta name="description" content="{{ meta_description | truncate(140) if meta_description else content | striptags | truncate(140) }}">
+    <meta name="title" property="og:title" content="{{ meta_title if meta_title else title }}">
+    <meta name="description" property="og:description" content="{{ meta_description | truncate(140) if meta_description else content | striptags | truncate(140) }}">
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="{{ robots if robots else 'index,follow' }}" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
