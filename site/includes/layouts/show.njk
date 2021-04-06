@@ -9,6 +9,15 @@ layout: base
                 A community of people building <img src="/images/portal-icon.png" alt="" class="inline-img-decor" /> developer portals
             </h1>
             <p class="hero--description">{{ sub_heading }}</p>
+
+            {% if callForSpeakers %}
+                <span class="gradient-line mt-1000 mb-800"></span>
+                <h3 class="mb-500">Share your experiences <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
+                <a href="/talk" class="button propose-talk mt-500" target="_blank" rel="noopener nofollow"> 
+                    Propose a talk
+                </a>
+            {% else %}
+
             <span class="gradient-line mt-1000 mb-800"></span>
             <h3 class="mb-500">Featuring <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
             <div class="tablet:box-flex">
@@ -41,6 +50,7 @@ layout: base
                     </div>
                 </div>
             </div>
+            {% endif %}
         </div>
         <div class="hero-illustration laptop:width-half">
             <img src="/images/hero-header@1.5x.png" alt="" />

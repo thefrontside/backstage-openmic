@@ -5,3 +5,5 @@ package-lock.json
 public/
 js/
 css/
+# Local Netlify folder
+.netlify
