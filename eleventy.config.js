@@ -20,24 +20,24 @@ module.exports = config => {
     // Minify our HTML
     config.addTransform('htmlminify', require('./utilities/transforms/htmlminify'))
 
-    // // Collections
-    // config.addCollection('blog', collection => {
+    // Collections
+    config.addCollection('show', collection => {
 
-    //     const blogs = collection.getFilteredByTag('blog')
+        const shows = collection.getFilteredByTag('show')
 
-    //     for ( let i = 0; i < blogs.length; i++ ) {
+        for ( let i = 0; i < shows.length; i++ ) {
 
-    //         const previous_post = blogs[i - 1]
-    //         const next_post = blogs[i + 1]
+            const previous_post = shows[i - 1]
+            const next_post = shows[i + 1]
 
-    //         blogs[i].data['previous_post'] = previous_post
-    //         blogs[i].data['next_post'] = next_post
+            shows[i].data['previous_post'] = previous_post
+            shows[i].data['next_post'] = next_post
 
-    //     }
+        }
 
-    //     return blogs.reverse()
+        return shows.reverse()
 
-    // })
+    })
 
     // // Categories collection
     // config.addCollection('categories', collection => {
@@ -62,6 +62,7 @@ module.exports = config => {
     config.addLayoutAlias('base', 'layouts/base.njk')
     config.addLayoutAlias('home', 'layouts/home.njk')
     config.addLayoutAlias('page', 'layouts/page.njk')
+    config.addLayoutAlias('past-show', 'layouts/past-show.njk')
     // config.addLayoutAlias('blog', 'layouts/blog.njk')
     // config.addLayoutAlias('post', 'layouts/post.njk')
     // config.addLayoutAlias('contact', 'layouts/contact.njk')

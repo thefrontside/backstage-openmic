@@ -12,11 +12,9 @@ layout: base
 
             {% if callForSpeakers %}
                 <span class="gradient-line mt-1000 mb-800"></span>
-                <h3 class="mb-500">
-                    Share your experiences <img src="/images/decor-eye.png" alt="" class="inline-img-decor" />
-                </h3>
+                <h3 class="mb-500">Share your experiences <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
                 <a href="/talk" class="button propose-talk mt-500" target="_blank" rel="noopener nofollow"> 
-                    Propose a talk!
+                    Propose a talk
                 </a>
             {% else %}
 
@@ -64,8 +62,6 @@ layout: base
 <div class="home-nextshow-banner mb-1000">
     {% include "components/nextshow-banner.njk" %}
 </div>
-
-{% if not callForSpeakers %}
 
 <div class="main inner box-flex pt-800 pb-800">
     <div class="agenda-header laptop:box-flex">
@@ -159,8 +155,6 @@ layout: base
     {% include "components/nextshow-banner.njk" %}
 </div>
 
-{% endif %}
-
 <div class="main inner box-flex pt-800 pb-800 mb-1000">
     <div class="laptop:width-half">
         <h3 class="green-banner">
@@ -173,7 +167,7 @@ layout: base
             <p class="mt-500">
                 Talks could be about things you have learned when adopting Backstage in your organization. Or, if you're a plugin author, this is a perfect space to present it to the community.
             </p>
-            <a href="/talk" class="button propose-talk mt-500" target="_blank" rel="noopener nofollow"> 
+            <a href="/talk" class="button mt-500" target="_blank" rel="noopener nofollow"> 
                 Propose a talk
             </a>
         </div>
