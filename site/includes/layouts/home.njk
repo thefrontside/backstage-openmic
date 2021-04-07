@@ -1,0 +1,181 @@
+---
+layout: base
+---
+
+<main id="main" class="main inner box-flex pt-1000 pb-1000" tabindex="-1">
+    <header class="hero page-header laptop:box-flex">
+        <div class="laptop:width-half">
+            <h1 class="hero--title">
+                A community of people building <img src="/images/portal-icon.png" alt="" class="inline-img-decor" /> developer portals
+            </h1>
+            <p class="hero--description">{{ sub_heading }}</p>
+
+            {% if callForSpeakers %}
+                <span class="gradient-line mt-1000 mb-800"></span>
+                <h3 class="mb-500">
+                    Share your experiences <img src="/images/decor-eye.png" alt="" class="inline-img-decor" />
+                </h3>
+                <a href="/talk" class="button propose-talk mt-500" target="_blank" rel="noopener nofollow"> 
+                    Propose a talk!
+                </a>
+            {% else %}
+
+            <span class="gradient-line mt-1000 mb-800"></span>
+            <h3 class="mb-500">Featuring <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
+            <div class="tablet:box-flex">
+                <div class="featured-speaker tablet:width-half mb-500">
+                    <div class="speaker-avatar">
+                        <img src="{{speakerOne.image}}" alt="{{ speakerOne.name }} portrait" class="speaker-avatar--speaker-pic" />
+                        <img src="{{speakerOne.companyLogo}}" alt="{{ speakerOne.company }} logo" class="speaker-avatar--company-icon" />
+                    </div>
+                    <div>
+                        <strong class="featured-speaker--name">
+                            {{ speakerOne.name }}
+                        </strong>
+                        <em class="featuring-speaker--role">
+                            {{ speakerOne.title }} at {{ speakerOne.company }}
+                        </em>
+                    </div>
+                </div>
+                <div class="featured-speaker tablet:width-half mb-500">
+                    <div class="speaker-avatar">
+                        <img src="{{speakerTwo.image}}" alt="{{ speakerTwo.name }} portrait" class="speaker-avatar--speaker-pic" />
+                        <img src="{{speakerTwo.companyLogo}}" alt="{{ speakerTwo.company }} logo" class="speaker-avatar--company-icon" />
+                    </div>
+                    <div>
+                        <strong class="featured-speaker--name">
+                            {{ speakerTwo.name }}
+                        </strong>
+                        <em class="featuring-speaker--role">
+                            {{ speakerTwo.title }} at {{ speakerTwo.company }}
+                        </em>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="hero-illustration laptop:width-half">
+            <img src="/images/hero-header@1.5x.png" alt="" />
+        </div>
+    </header>
+</main>
+
+
+<div class="home-nextshow-banner mb-1000">
+    {% include "components/nextshow-banner.njk" %}
+</div>
+
+{% if not callForSpeakers %}
+
+<div class="main inner box-flex pt-800 pb-800">
+    <div class="agenda-header laptop:box-flex">
+        <h2 class="agenda-title green-banner" id="agenda">
+            <a href="#agenda" class="color-secondary">
+                Agenda: {{ eventDateUS  }} / ONLINE / 60 mins
+            </a>
+        </h2>
+        <div class="hosted-by mt-800">
+            <span class="hosted-by--title"><span>Hosted by</span></span>
+            <span class="hosted-by--name"><span>Taras Mankovski</span></span>
+            <span class="hosted-by--role"><span>CEO at Frontside Software</span></span>
+        </div>
+    </div>
+    <ol class="talks-list">
+        <li class="talks-item laptop:box-flex">
+            <div class="talk-time">
+                <span class="talk-time--time green-banner">
+                    {{speakerOne.talkTime}}
+                </span>
+            </div>
+            <div class="talk-box laptop:box-flex align-center">
+                <div class="speaker-avatar speaker-avatar__talk">
+                    <img src="{{speakerOne.image}}" alt="{{ speakerOne.name }} portrait" class="speaker-avatar--speaker-pic" />
+                        <img src="{{speakerOne.companyLogo}}" alt="{{ speakerOne.company }} logo" class="speaker-avatar--company-icon" />
+                </div>
+                <div class="talk-box--text">
+                    <h3 class="mb-300">
+                        {{speakerOne.talkTitle}}
+                    </h3>
+                    <strong>
+                        {{ speakerOne.name }}, {{ speakerOne.title }}
+                        at <a href="{{ speakerOne.companyLink }}" target="_blank" rel="noopener">{{ speakerOne.company }}</a>
+                    </strong>
+                    <p class="mt-600 mb-500">
+                        {{speakerOne.talkDescription}}
+                    </p>
+                    <p class="text-400">
+                        <a href="{{ speakerOne.learnMore }}"  target="_blank" rel="noopener nofollow">
+                            Learn more on Github
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li class="talks-item laptop:box-flex">
+            <div class="talk-time">
+                <span class="talk-time--time green-banner">
+                    {{speakerTwo.talkTime}}
+                </span>
+            </div>
+            <div class="talk-box laptop:box-flex align-center">
+                <div class="speaker-avatar speaker-avatar__talk">
+                    <img src="{{speakerTwo.image}}" alt="{{ speakerTwo.name }} portrait" class="speaker-avatar--speaker-pic" />
+                        <img src="{{speakerTwo.companyLogo}}" alt="{{ speakerTwo.company }} logo" class="speaker-avatar--company-icon" />
+                </div>
+                <div class="talk-box--text">
+                    <h3 class="mb-300">
+                        {{speakerTwo.talkTitle}}
+                    </h3>
+                    <strong>
+                        {{ speakerTwo.name }}, {{ speakerTwo.title }}
+                        at <a href="{{ speakerTwo.companyLink }}" target="_blank" rel="noopener">{{ speakerTwo.company }}</a>
+                    </strong>
+                    <p class="mt-600 mb-500">
+                        {{speakerTwo.talkDescription}}
+                    </p>
+                    <p class="text-400">
+                        <a href="{{ speakerTwo.learnMore }}" target="_blank" rel="noopener nofollow">
+                            Learn more on Github
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ol>
+    <div class="join-us">
+        <p>
+            Join us!
+        </p>
+        <a href="/rsvp" class="button-with-pointer">
+            <span class="button">
+                RSVP
+            </span>
+            <img src="/images/button-pointer.png" alt="" />
+        </a>
+    </div>
+</div>
+
+<div class="home-nextshow-banner mt-1000 mb-1000">
+    {% include "components/nextshow-banner.njk" %}
+</div>
+
+{% endif %}
+
+<div class="main inner box-flex pt-800 pb-800 mb-1000">
+    <div class="laptop:width-half">
+        <h3 class="green-banner">
+            <a href="/talk" class="color-secondary">Propose a talk!</a>
+        </h3>
+        <div class="pr-500 pl-500">
+            <p class="mt-500">
+                We want to make these events an open mic for everyone using Backstage! We want everyone to share their experiences and ideas, so we can all grow together. 
+            </p>
+            <p class="mt-500">
+                Talks could be about things you have learned when adopting Backstage in your organization. Or, if you're a plugin author, this is a perfect space to present it to the community.
+            </p>
+            <a href="/talk" class="button propose-talk mt-500" target="_blank" rel="noopener nofollow"> 
+                Propose a talk
+            </a>
+        </div>
+    </div>
+</div>

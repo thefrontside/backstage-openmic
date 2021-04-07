@@ -19,4 +19,7 @@
 .propose-talk {
     background: linear-gradient(90deg, get-color('fs-skyblue'), get-color('fs-pink'));
     color: get-color('white');
+    &:hover {
+        color: get-color('fs-pink');
+    }
 }
