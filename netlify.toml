@@ -15,6 +15,11 @@
 [[redirects]]
   from = "/talk"
   to = "https://frontside-software.typeform.com/to/h4jmH8qH"
+
+
+[[redirects]]
+  from = "/talkGot"
+  to = "https://frontside-software.typeform.com/to/h4jmH8qH"
   
 [[redirects]]
   from = "/rsvp"
