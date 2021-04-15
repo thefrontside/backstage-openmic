@@ -7,9 +7,9 @@ sub_heading: We’re a monthly get together of Backstage users sharing their exp
 eleventyNavigation:
   key: Home
   order: 1
-eventDate: 2021-04-28 18:00 GMT+0100
-eventDateUS: April 28th
-eventDateEU: 28th of April
+eventDate: 2021-05-05 18:00 GMT+0100
+eventDateUS: May 5th
+eventDateEU: 5th of May
 eventTimeCET: 18h CET
 eventTimeEST: 12 pm ET
 callForSpeakers: true
