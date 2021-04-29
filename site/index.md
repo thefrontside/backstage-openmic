@@ -1,6 +1,6 @@
 ---
 layout: home
-meta_title: April's show - Backstage Open Mic
+meta_title: May's show - Backstage Open Mic
 meta_description: We’re a monthly get together of Backstage users sharing their experiences and helping each other.
 title: A community of people building developer portals
 sub_heading: We’re a monthly get together of Backstage users sharing their experiences and helping each other
