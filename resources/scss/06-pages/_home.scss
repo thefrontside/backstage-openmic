@@ -32,6 +32,7 @@
 }
 
 .speaker-avatar {
+    flex-shrink: 0;
     position: relative;
 
     &--speaker-pic {

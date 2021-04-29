@@ -26,14 +26,16 @@ layout: base
                 <div class="featured-speaker tablet:width-half mb-500">
                     <div class="speaker-avatar">
                         <img src="{{speakerOne.image}}" alt="{{ speakerOne.name }} portrait" class="speaker-avatar--speaker-pic" />
+                        {% if speakerOne.companyLogo %}
                         <img src="{{speakerOne.companyLogo}}" alt="{{ speakerOne.company }} logo" class="speaker-avatar--company-icon" />
+                        {% endif %}
                     </div>
                     <div>
                         <strong class="featured-speaker--name">
                             {{ speakerOne.name }}
                         </strong>
                         <em class="featuring-speaker--role">
-                            {{ speakerOne.title }} at {{ speakerOne.company }}
+                            {{ speakerOne.title }} {{"of" if speakerOne.isLibrary else "at" }} {{ speakerOne.company }}
                         </em>
                     </div>
                 </div>
@@ -98,16 +100,19 @@ layout: base
                     </h3>
                     <strong>
                         {{ speakerOne.name }}, {{ speakerOne.title }}
-                        at <a href="{{ speakerOne.companyLink }}" target="_blank" rel="noopener">{{ speakerOne.company }}</a>
+                        {{"of" if speakerOne.isLibrary else "at" }}
+                        <a href="{{ speakerOne.companyLink }}" target="_blank" rel="noopener">{{ speakerOne.company }}</a>
                     </strong>
                     <p class="mt-600 mb-500">
                         {{speakerOne.talkDescription}}
                     </p>
-                    <p class="text-400">
-                        <a href="{{ speakerOne.learnMore }}"  target="_blank" rel="noopener nofollow">
-                            Learn more on Github
-                        </a>
-                    </p>
+                    {% if speakerOne.learnMore %}
+                        <p class="text-400">
+                            <a href="{{ speakerOne.learnMore }}"  target="_blank" rel="noopener nofollow">
+                                Learn more on Github
+                            </a>
+                        </p>
+                    {% endif %}
                 </div>
             </div>
         </li>
@@ -133,11 +138,13 @@ layout: base
                     <p class="mt-600 mb-500">
                         {{speakerTwo.talkDescription}}
                     </p>
-                    <p class="text-400">
-                        <a href="{{ speakerTwo.learnMore }}" target="_blank" rel="noopener nofollow">
-                            Learn more on Github
-                        </a>
-                    </p>
+                    {% if speakerOne.learnMore %}
+                        <p class="text-400">
+                            <a href="{{ speakerTwo.learnMore }}" target="_blank" rel="noopener nofollow">
+                                Learn more on Github
+                            </a>
+                        </p>
+                    {% endif %}
                 </div>
             </div>
         </li>
