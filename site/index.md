@@ -25,7 +25,7 @@ speakerOne:
   talkTime: 12:00pm ET / 18:00 CET 
 speakerTwo:
   name: Elrick Ryan
-  title: Software Engineer
+  title: Product Manager
   image: /images/speakers/elrick-ryan.png
   company: Frontside Software
   companyLogo: /images/logos/frontside.png
