@@ -1,5 +1,5 @@
 ---
-meta_title: Our first show! - Backstage Open Mic
+meta_title: March 2021 - our first show!
 meta_description: We’re a monthly get together of Backstage users sharing their experiences and helping each other.
 title: A community of people building developer portals
 sub_heading: We’re a monthly get together of Backstage users sharing their experiences and helping each other

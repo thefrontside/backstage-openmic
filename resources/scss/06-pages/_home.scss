@@ -156,6 +156,13 @@
     }
 }
 
+.talk-video {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    position: relative;
+}
+
 .talk-box {
     $border-radius: 40px;
     position: relative;
