@@ -3153,6 +3153,11 @@ electron-to-chromium@^1.3.649:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.673.tgz#b4f81c930b388f962b7eba20d0483299aaa40913"
   integrity sha512-ms+QR2ckfrrpEAjXweLx6kNCbpAl66DcW//3BZD4BV5KhUgr0RZRce1ON/9J3QyA3JO28nzgb5Xv8DnPr05ILg==
 
+eleventy-plugin-vimeo-embed@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-vimeo-embed/-/eleventy-plugin-vimeo-embed-1.3.0.tgz#9f050ee649740ae499f38c43ac0241416a746eeb"
+  integrity sha512-0b+A9lp9pprD+Q9qZ8nkctWA0GPiZIBLNeuQe+39gg52BTSscZaenl2V88RZmyTWBaDv/HBgS8QxMG/+WHwJMQ==
+
 elliptic@^6.5.3:
   version "6.5.4"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.4.tgz#da37cebd31e79a1367e941b592ed1fbebd58abbb"
