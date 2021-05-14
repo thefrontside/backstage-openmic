@@ -30,16 +30,14 @@ module.exports = config => {
 
             const previousShow = shows[i - 1];
             const nextShow = shows[i + 1];
-            const talksInShow = talks.filter(({ data }) => shows[i].data.showKey === data.showKey);
+            const talksInShow = talks.filter((talk) => {
+                return shows[i].data.showkey === talk.data.showkey;
+            });
 
             shows[i].data.previousShow = previousShow
             shows[i].data.nextShow = nextShow
             shows[i].data.talks = talksInShow;
         }
-
-        shows.forEach((show) => {
-            console.log(show.data.talks.length);
-        });
 
         return shows.reverse()
 

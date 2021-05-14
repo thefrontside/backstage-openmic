@@ -45,22 +45,34 @@ layout: base
             <div class="talk-box laptop:box-flex align-center">
                 <div class="speaker-avatar speaker-avatar__talk">
                     <img src="{{talk.data.speaker.image}}" alt="{{ talk.data.speaker.name }} portrait" class="speaker-avatar--speaker-pic" />
+                    {%if talk.data.speaker.companyLogo %}
                         <img src="{{talk.data.speaker.companyLogo}}" alt="{{ talk.data.speaker.company }} logo" class="speaker-avatar--company-icon" />
+                    {% endif %}
                 </div>
                 <div class="talk-box--text">
                     <h3 class="mb-300">
                         {{talk.data.title}}
                     </h3>
                     <strong>
-                        {{ talk.data.speaker.name }}, {{ speakerTwo.title }}
-                        at <a href="{{ talk.data.speaker.companyLink }}" target="_blank" rel="noopener">{{ talk.data.speaker.company }}</a>
+                        {{ talk.data.speaker.name }}, {{ talk.data.speaker.title }}
+                        {{"of" if talk.data.speaker.isLibrary else "at" }}
+                        <a href="{{ talk.data.speaker.companyLink }}" target="_blank" rel="noopener">{{ talk.data.speaker.company }}</a>
                     </strong>
                     <p class="mt-600 mb-500">
                         {{talk.data.description}}
                     </p>
-                     <a href="{{ talk.url }}" class="button button__secondary" title="Watch {{ talk.data.speaker.name }}'s Talk">
+                    {% if talk.data.vimeoLink %}
+                    <a href="{{ talk.data.vimeoLink }}" class="button button__secondary" title="Watch {{ talk.data.speaker.name }}'s Talk" target="_blank" rel="noopener nofollow">
                         Watch Talk
-                    </a>
+                    </a> 
+                    {% else %}
+                        <a class="button button__coming-soon" disabled title="Watch {{ talk.data.speaker.name }}'s Talk">
+                            Coming soon
+                        </a> 
+                    {% endif %}
+                     {# <a href="{{ talk.url }}" class="button button__secondary" title="Watch {{ talk.data.speaker.name }}'s Talk">
+                        Watch Talk
+                    </a> #}
                     {# {% if talk.data.learnMore %}
                         <p class="text-400">
                             <a href="{{ alk.data.learnMore }}" target="_blank" rel="noopener nofollow">
