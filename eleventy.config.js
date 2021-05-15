@@ -23,21 +23,30 @@ module.exports = config => {
     // Collections
     config.addCollection('show', collection => {
 
-        const shows = collection.getFilteredByTag('show')
+        const shows = collection.getFilteredByTag('show');
+        const talks = collection.getFilteredByTag('talk');
 
         for ( let i = 0; i < shows.length; i++ ) {
 
-            const previous_post = shows[i - 1]
-            const next_post = shows[i + 1]
+            const previousShow = shows[i - 1];
+            const nextShow = shows[i + 1];
+            const talksInShow = talks.filter((talk) => {
+                return shows[i].data.showkey === talk.data.showkey;
+            });
 
-            shows[i].data['previous_post'] = previous_post
-            shows[i].data['next_post'] = next_post
-
+            shows[i].data.previousShow = previousShow
+            shows[i].data.nextShow = nextShow
+            shows[i].data.talks = talksInShow;
         }
 
         return shows.reverse()
 
     })
+
+    // config.addCollection('talk', collection => {
+    //     const talks = collection.getFilteredByTag('talk');
+
+    // })
 
     // // Categories collection
     // config.addCollection('categories', collection => {

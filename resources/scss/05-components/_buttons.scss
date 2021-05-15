@@ -12,9 +12,25 @@
     @include apply-utility('weight', 'bold');
 
     &:hover {
+        color: get-color('primary');
         @include apply-utility('bg', 'white');
     }
+    &__secondary {
+        background-color: get-color('primary');
+        color: get-color('secondary');
+        border: 2px solid get-color('secondary');
+        &:hover {
+            @include apply-utility('bg', 'white');
+            border-color: white;
+        }
+    }
+    &__coming-soon, &__coming-soon:hover {
+        background: #121212;
+        color: #6b83d1;
+        border: 2px solid;
+    }
 }
+
 
 .propose-talk {
     background: linear-gradient(90deg, get-color('fs-skyblue'), get-color('fs-pink'));

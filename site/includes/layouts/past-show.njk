@@ -2,174 +2,117 @@
 layout: base
 ---
 
-<main id="main" class="main inner box-flex pt-1000 pb-1000" tabindex="-1">
+<main id="main" class="main inner box-flex pt-1000 pb-300" tabindex="-1">
     <header class="hero page-header laptop:box-flex">
         <div class="laptop:width-half">
             <h1 class="hero--title">
-                A community of people building <img src="/images/portal-icon.png" alt="" class="inline-img-decor" /> developer portals
+                {{ title }}
             </h1>
-            <p class="hero--description">{{ sub_heading }}</p>
-
-            {% if callForSpeakers %}
-                <span class="gradient-line mt-1000 mb-800"></span>
-                <h3 class="mb-500">Share your experiences <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
-                <a href="/talk" class="button propose-talk mt-500" target="_blank" rel="noopener nofollow"> 
-                    Propose a talk
-                </a>
-            {% else %}
+            <p class="hero--description">{{ meta_description }}</p>
 
             <span class="gradient-line mt-1000 mb-800"></span>
-            <h3 class="mb-500">Featuring <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
-            <div class="tablet:box-flex">
-                <div class="featured-speaker tablet:width-half mb-500">
-                    <div class="speaker-avatar">
-                        <img src="{{speakerOne.image}}" alt="{{ speakerOne.name }} portrait" class="speaker-avatar--speaker-pic" />
-                        <img src="{{speakerOne.companyLogo}}" alt="{{ speakerOne.company }} logo" class="speaker-avatar--company-icon" />
-                    </div>
-                    <div>
-                        <strong class="featured-speaker--name">
-                            {{ speakerOne.name }}
-                        </strong>
-                        <em class="featuring-speaker--role">
-                            {{ speakerOne.title }} at {{ speakerOne.company }}
-                        </em>
-                    </div>
-                </div>
-                <div class="featured-speaker tablet:width-half mb-500">
-                    <div class="speaker-avatar">
-                        <img src="{{speakerTwo.image}}" alt="{{ speakerTwo.name }} portrait" class="speaker-avatar--speaker-pic" />
-                        <img src="{{speakerTwo.companyLogo}}" alt="{{ speakerTwo.company }} logo" class="speaker-avatar--company-icon" />
-                    </div>
-                    <div>
-                        <strong class="featured-speaker--name">
-                            {{ speakerTwo.name }}
-                        </strong>
-                        <em class="featuring-speaker--role">
-                            {{ speakerTwo.title }} at {{ speakerTwo.company }}
-                        </em>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
+            {# <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <text class="stroke-text" x="50%" y="50%">
+                    {{ eventDateUS  }} @ {{ eventTimeEST }}
+                </text>
+            </svg> #}
+            
         </div>
         <div class="hero-illustration laptop:width-half">
-            <img src="/images/hero-header@1.5x.png" alt="" />
+            {# <img src="/images/hero-header@1.5x.png" alt="" /> #}
         </div>
     </header>
 </main>
 
 
-<div class="home-nextshow-banner mb-1000">
-    {% include "components/nextshow-banner.njk" %}
-</div>
-
-<div class="main inner box-flex pt-800 pb-800">
-    <div class="agenda-header laptop:box-flex">
-        <h2 class="agenda-title green-banner" id="agenda">
-            <a href="#agenda" class="color-secondary">
-                Agenda: {{ eventDateUS  }} / ONLINE / 60 mins
-            </a>
-        </h2>
-        <div class="hosted-by mt-800">
-            <span class="hosted-by--title"><span>Hosted by</span></span>
-            <span class="hosted-by--name"><span>Taras Mankovski</span></span>
-            <span class="hosted-by--role"><span>CEO at Frontside Software</span></span>
-        </div>
-    </div>
+<div class="main inner box-flex pt-400 pb-900">
+    <h3 class="mb-400">Talk recordings <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
     <ol class="talks-list">
-        <li class="talks-item laptop:box-flex">
-            <div class="talk-time">
-                <span class="talk-time--time green-banner">
-                    {{speakerOne.talkTime}}
-                </span>
+        {# <li class="talks-item laptop:box-flex">
+            <div class="talk-video">
+                <iframe src="https://player.vimeo.com/video/536715621?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                    title="Roadie&amp;#039;s Multi-Tenant Backstage Architecture">
+                </iframe>
             </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+        </li> #}
+        {% for talk in talks %}
+        <li class="talks-item laptop:box-flex">
             <div class="talk-box laptop:box-flex align-center">
                 <div class="speaker-avatar speaker-avatar__talk">
-                    <img src="{{speakerOne.image}}" alt="{{ speakerOne.name }} portrait" class="speaker-avatar--speaker-pic" />
-                        <img src="{{speakerOne.companyLogo}}" alt="{{ speakerOne.company }} logo" class="speaker-avatar--company-icon" />
+                    <img src="{{talk.data.speaker.image}}" alt="{{ talk.data.speaker.name }} portrait" class="speaker-avatar--speaker-pic" />
+                    {%if talk.data.speaker.companyLogo %}
+                        <img src="{{talk.data.speaker.companyLogo}}" alt="{{ talk.data.speaker.company }} logo" class="speaker-avatar--company-icon" />
+                    {% endif %}
                 </div>
                 <div class="talk-box--text">
                     <h3 class="mb-300">
-                        {{speakerOne.talkTitle}}
+                        {{talk.data.title}}
                     </h3>
                     <strong>
-                        {{ speakerOne.name }}, {{ speakerOne.title }}
-                        at <a href="{{ speakerOne.companyLink }}" target="_blank" rel="noopener">{{ speakerOne.company }}</a>
+                        {{ talk.data.speaker.name }}, {{ talk.data.speaker.title }}
+                        {{"of" if talk.data.speaker.isLibrary else "at" }}
+                        <a href="{{ talk.data.speaker.companyLink }}" target="_blank" rel="noopener">{{ talk.data.speaker.company }}</a>
                     </strong>
                     <p class="mt-600 mb-500">
-                        {{speakerOne.talkDescription}}
+                        {{talk.data.description}}
                     </p>
-                    <p class="text-400">
-                        <a href="{{ speakerOne.learnMore }}"  target="_blank" rel="noopener nofollow">
-                            Learn more on Github
-                        </a>
-                    </p>
+                    {% if talk.data.vimeoLink %}
+                    <a href="{{ talk.data.vimeoLink }}" class="button button__secondary" title="Watch {{ talk.data.speaker.name }}'s Talk" target="_blank" rel="noopener nofollow">
+                        Watch Talk
+                    </a> 
+                    {% else %}
+                        <a class="button button__coming-soon" disabled title="Watch {{ talk.data.speaker.name }}'s Talk">
+                            Recording coming soon
+                        </a> 
+                    {% endif %}
+                     {# <a href="{{ talk.url }}" class="button button__secondary" title="Watch {{ talk.data.speaker.name }}'s Talk">
+                        Watch Talk
+                    </a> #}
+                    {# {% if talk.data.learnMore %}
+                        <p class="text-400">
+                            <a href="{{ alk.data.learnMore }}" target="_blank" rel="noopener nofollow">
+                                Learn more on Github
+                            </a>
+                        </p>
+                    {% endif %} #}
                 </div>
             </div>
         </li>
-        <li class="talks-item laptop:box-flex">
-            <div class="talk-time">
-                <span class="talk-time--time green-banner">
-                    {{speakerTwo.talkTime}}
-                </span>
-            </div>
-            <div class="talk-box laptop:box-flex align-center">
-                <div class="speaker-avatar speaker-avatar__talk">
-                    <img src="{{speakerTwo.image}}" alt="{{ speakerTwo.name }} portrait" class="speaker-avatar--speaker-pic" />
-                        <img src="{{speakerTwo.companyLogo}}" alt="{{ speakerTwo.company }} logo" class="speaker-avatar--company-icon" />
-                </div>
-                <div class="talk-box--text">
-                    <h3 class="mb-300">
-                        {{speakerTwo.talkTitle}}
-                    </h3>
-                    <strong>
-                        {{ speakerTwo.name }}, {{ speakerTwo.title }}
-                        at <a href="{{ speakerTwo.companyLink }}" target="_blank" rel="noopener">{{ speakerTwo.company }}</a>
-                    </strong>
-                    <p class="mt-600 mb-500">
-                        {{speakerTwo.talkDescription}}
-                    </p>
-                    <p class="text-400">
-                        <a href="{{ speakerTwo.learnMore }}" target="_blank" rel="noopener nofollow">
-                            Learn more on Github
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </li>
+        {% endfor %}
     </ol>
-    <div class="join-us">
-        <p>
-            Join us!
-        </p>
-        <a href="/rsvp" target="_blank" class="button-with-pointer">
-            <span class="button">
-                RSVP
-            </span>
-            <img src="/images/button-pointer.png" alt="" />
-        </a>
-    </div>
 </div>
 
-<div class="home-nextshow-banner mt-1000 mb-1000">
-    {% include "components/nextshow-banner.njk" %}
-</div>
-
-<div class="main inner box-flex pt-800 pb-800 mb-1000">
+<div class="inner box-flex pt-800 pb-1000 mb-1000">
     <div class="laptop:width-half">
         <h3 class="green-banner">
-            <a href="/talk" class="color-secondary">Propose a talk!</a>
+            <a href="/talk" class="color-secondary">Don't miss our next show!</a>
         </h3>
         <div class="pr-500 pl-500">
             <p class="mt-500">
-                We want to make these events an open mic for everyone using Backstage! We want everyone to share their experiences and ideas, so we can all grow together. 
+                Besides the talks, one third of the time in the event is about community discussions. We'd love to hear from you in real-time!
             </p>
-            <p class="mt-500">
-                Talks could be about things you have learned when adopting Backstage in your organization. Or, if you're a plugin author, this is a perfect space to present it to the community.
-            </p>
-            <a href="/talk" class="button mt-500" target="_blank" rel="noopener nofollow"> 
-                Propose a talk
+            <br />
+            <a href="/rsvp" target="_blank" class="button-with-pointer">
+                <span class="button">
+                    See you there
+                </span>
+                <img src="/images/button-pointer.png" alt="" />
             </a>
+        </div>
+    </div>
+    <div class="laptop:width-half">
+        <h3 class="green-banner">
+            <a href="/talk" class="color-secondary">Porpose a talk</a>
+        </h3>
+        <div class="pr-500 pl-500">
+            <p class="mt-500">
+                We want to create a space where everyone shares their experiences and ideas with Backstage, so we can all grow together. <a href="/talk" target="_blank" rel="noopener nofollow">What do you want to talk about?</a> 
+            </p>
         </div>
     </div>
 </div>
