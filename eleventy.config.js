@@ -2,8 +2,11 @@ const navigation = require('@11ty/eleventy-navigation')
 const dates = require('./utilities/filters/dates')
 const helpers = require('./utilities/filters/helpers')
 const path = require('path')
+const embedVimeo = require("eleventy-plugin-vimeo-embed");
 
 module.exports = config => {
+    // vimeo plugin
+    config.addPlugin(embedVimeo)
 
     // navigation plugin
     config.addPlugin(navigation)
