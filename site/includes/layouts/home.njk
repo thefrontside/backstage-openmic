@@ -221,10 +221,10 @@ pagination:
                             </div>
                             <div>
                                 <strong class="featured-speaker--name">
-                                    {{ speakerOne.name }}
+                                    {{ talk.data.speaker.name }}
                                 </strong>
                                 <em class="featuring-speaker--role">
-                                    {{ talk.data.speaker.name }}, {{ talk.data.speaker.title }}
+                                    {{ talk.data.speaker.title }}
                                     {{"of" if talk.data.speaker.isLibrary else "at" }}
                                     {{ talk.data.speaker.company }}
                                 </em>
@@ -240,7 +240,7 @@ pagination:
 <div class="main inner box-flex pt-800 pb-800 mb-1000">
     <div class="laptop:width-half">
         <h3 class="green-banner">
-            <a href="/talk" class="color-secondary">Porpose a talk</a>
+            <a href="/talk" class="color-secondary">Propose a talk</a>
         </h3>
         <div class="pr-500 pl-500">
             <p class="mt-500">
