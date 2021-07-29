@@ -1,15 +1,15 @@
 ---
 layout: home
-meta_title: June's show - Backstage Open Mic
-meta_description: We’re a monthly get together of Backstage users sharing their experiences and helping each other.
+meta_title: Backstage Open Mic
+meta_description: We’re a casual get together of Backstage users sharing their experiences and helping each other.
 title: A community of people building developer portals
-sub_heading: We’re a monthly get together of Backstage users sharing their experiences and helping each other
+sub_heading: We’re a casual get together of Backstage users sharing their experiences and helping each other
 eleventyNavigation:
   key: Home
   order: 1
 eventDate: 2021-06-09 18:00 GMT+0100
-eventDateUS: June 9th
-eventDateEU: 9th of June
+eventDateUS: August 5th
+eventDateEU: 5th of August
 eventTimeCET: 18h CET
 eventTimeEST: 12 pm ET
 callForSpeakers: true

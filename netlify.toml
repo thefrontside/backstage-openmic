@@ -16,12 +16,13 @@
   from = "/talk"
   to = "https://frontside-software.typeform.com/to/h4jmH8qH"
 
-
-[[redirects]]
-  from = "/talkGot"
-  to = "https://frontside-software.typeform.com/to/h4jmH8qH"
   
 [[redirects]]
   from = "/rsvp"
-  to = "https://frontside-software.typeform.com/to/wlcQK3aV"
+  to = "https://frontside-software.typeform.com/to/Hwa01bCH"
+  
+[[redirects]]
+  from = "/join"
+  to = "https://frontside-software.typeform.com/to/Hwa01bCH"
+  
   

@@ -52,12 +52,13 @@ pagination:
             {% else %}
                 <span class="gradient-line mt-1000 mb-800"></span>
                 <h3 class="mb-500">
-                    Join us on {{ eventDateUS  }}
+                    Get event invites and tips
                     <img src="/images/decor-eye.png" alt="" class="inline-img-decor" />
                 </h3>
-                <a href="/rsvp" target="_blank" class="button">
-                        Reserve your spot!
-                    </a>
+                <a href="/join" target="_blank" class="button">
+                    Join our community
+                </a>
+                <p class="mt-500">We won't spam you, nor share your info 🤞🏽</p>
             {% endif %}
         </div>
         <div class="hero-illustration laptop:width-half">
@@ -77,7 +78,10 @@ pagination:
     <div class="agenda-header laptop:box-flex">
         <h2 class="agenda-title green-banner" id="agenda">
             <a href="#agenda" class="color-secondary">
-                Agenda: {{ eventDateUS  }} / ONLINE / 60 mins
+                {{ eventDateUS  }}
+                - 
+                Open Office hour @
+                <a href="https://www.twitch.tv/frontsidesoftware/schedule" target="_blank" rel="noopener noreferrer">Twitch</a>
             </a>
         </h2>
         <div class="hosted-by mt-800">
@@ -166,10 +170,10 @@ pagination:
                     </div>
                     <div class="talk-box--text">
                         <h3 class="mb-300">
-                            The agenda will be announced soon!
+                            A hands-on Backstage live stream
                         </h3>
                         <p class="mt-600 mb-500">
-                            The topics emerge from what's interesting to the community at the event's time. Talks can range from introductions to a Backstage plugin, to bringing the community together to think about an RFC for the core team's consideration. We also share experiences of running Backstage in production and understanding use-cases.
+                            In each session, we cover specific topics about Backstage that we're currently working on. Expect to hear about challenges that we're currently going through and how we're resolving them. Bring in questions and experiences to share!
                         </p>
                     </div>
                 </div>
@@ -178,11 +182,11 @@ pagination:
     </ol>
     <div class="join-us">
         <p>
-            Join us!
+            Events, tips, and networking!
         </p>
         <a href="/rsvp" target="_blank" class="button-with-pointer">
             <span class="button">
-                RSVP
+                Join Open Mic
             </span>
             <img src="/images/button-pointer.png" alt="" />
         </a>
