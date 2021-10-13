@@ -7,9 +7,9 @@ sub_heading: We’re a casual get together of Backstage users sharing their expe
 eleventyNavigation:
   key: Home
   order: 1
-eventDate: 2021-06-09 18:00 GMT+0100
-eventDateUS: Every Thursday
-eventDateEU: Every Thursday
+eventDate: 2021-11-04 18:00 GMT+0100
+eventDateUS: Nov 4th
+eventDateEU: 4th of Nov
 eventTimeCET: 18h CET
 eventTimeEST: 12 pm ET
 callForSpeakers: true
