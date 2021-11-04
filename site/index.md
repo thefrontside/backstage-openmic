@@ -11,7 +11,7 @@ eventDate: 2021-11-04 18:00 GMT+0100
 eventDateUS: Nov 4th
 eventDateEU: 4th of Nov
 eventTimeCET: 18h CET
-eventTimeEST: 12 pm ET
+eventTimeEST: 1pm ET
 callForSpeakers: true
 speakerOne:
   talkTime: 12:00pm ET / 18:00 CET 
