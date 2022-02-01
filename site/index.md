@@ -8,10 +8,10 @@ eleventyNavigation:
   key: Home
   order: 1
 eventDate: 2021-11-04 18:00 GMT+0100
-eventDateUS: Nov 4th
-eventDateEU: 4th of Nov
+eventDateUS: March 3rd
+eventDateEU: 3rd of March
 eventTimeCET: 18h CET
-eventTimeEST: 1pm ET
+eventTimeEST: 12pm ET
 callForSpeakers: true
 speakerOne:
   talkTime: 12:00pm ET / 18:00 CET 
