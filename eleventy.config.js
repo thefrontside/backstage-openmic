@@ -44,7 +44,14 @@ module.exports = config => {
   });
 
   config.addCollection('recording', collection => {
-    const talks = collection.getFilteredByTag('talk');
+    let talks = collection.getFilteredByTag('talk');
+
+    talks.forEach((talk) => {
+      const otherTalks = talks.filter((thisTalk) => {
+        return thisTalk.data.title != talk.data.title;
+      });
+      talk.data.otherTalks = otherTalks;
+    });
 
     return talks;
   })
