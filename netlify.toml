@@ -24,3 +24,8 @@
 [[redirects]]
   from = "/join"
   to = "https://frontside-software.typeform.com/to/Hwa01bCH"
+
+
+[[redirects]]
+  from = "/show"
+  to = "/#past-shows"

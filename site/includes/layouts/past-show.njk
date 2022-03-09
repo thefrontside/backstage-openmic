@@ -62,7 +62,7 @@ layout: base
                         {{talk.data.description}}
                     </p>
                     {% if talk.data.vimeoLink %}
-                    <a href="{{ talk.data.vimeoLink }}" class="button button__secondary" title="Watch {{ talk.data.speaker.name }}'s Talk" target="_blank" rel="noopener nofollow">
+                    <a href="{{ talk.url }}" class="button button__secondary" title="Watch {{ talk.data.speaker.name }}'s Talk">
                         Watch Talk
                     </a> 
                     {% else %}
