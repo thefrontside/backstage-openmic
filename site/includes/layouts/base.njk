@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ meta_title if meta_title else title }}</title>
@@ -14,7 +14,7 @@
     <meta name="title" property="og:title" content="{{ meta_title if meta_title else title }}">
     <meta name="description" property="og:description" content="{{ meta_description | truncate(140) if meta_description else content | striptags | truncate(140) }}">
     <meta name="format-detection" content="telephone=no">
-    <meta name="robots" content="{{ robots if robots else 'index,follow' }}" />
+    <meta name="robots" content="{{ robots if robots else 'index,follow' }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
     {# include social meta tags #}
@@ -26,28 +26,27 @@
     <link rel="apple-touch-icon" href="{{ site.images.apple_touch_icon }}" sizes="180x180">
 
     <script async defer data-domain="backstage-openmic.com" src="https://plausible.io/js/plausible.js"></script>
-</head>
+  </head>
 
-
-<body id="page-{{ page.fileSlug if page.fileSlug else 'home' }}" class="type-{{ layout | lower }} page-{{ page.fileSlug if page.fileSlug else 'home' }} bg-primary color-white font-base leading-normal">
+  <body id="page-{{ page.fileslug if page.fileslug else 'home' }}" class="type-{{ layout | lower }} page-{{ page.fileslug if page.fileslug else 'home' }} bg-primary color-white font-base leading-normal">
 
     <a class="sr-only" href="#main">Skip to content</a>
 
     <div id="wrapper" class="wrapper box-flex pb-500">
 
-        {# include header #}
-        {% include "components/header.njk" %}
+      {# include header #}
+      {% include "components/header.njk" %}
 
-        {# include content #}
-        {{ content | safe }}
+      {# include content #}
+      {{ content | safe }}
 
-        {# include footer #}
-        {% include "components/footer.njk" %}
+      {# include footer #}
+      {% include "components/footer.njk" %}
 
     </div>
 
     {# include mobile nav #}
     {% include "components/mobile-nav.njk" %}
 
-</body>
+  </body>
 </html>

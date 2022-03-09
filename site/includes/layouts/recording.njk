@@ -1,65 +1,65 @@
----
-layout: base
----
+--- layout: base ---
 
 <main id="main" class="main inner box-flex pt-1000 pb-300" tabindex="-1">
-    <header class="hero page-header laptop:box-flex">
-        <div class="laptop:width-half">
-            <h1 class="hero--title">
-                {{ title }}
-            </h1>
-            <p class="hero--description">{{ meta_description }}</p>
+  <header class="hero page-header laptop:box-flex">
+    <div class="laptop:full-width">
+      <h1 class="hero--title">
+        {{ title }}
+      </h1>
+      <p class="hero--description">
+        {{ description }}
+      </p>
 
-            <span class="gradient-line mt-1000 mb-800"></span>
-            {# <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <span class="gradient-line mt-1000 mb-800"></span>
+      {# <svg class="scrolling-text--item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <text class="stroke-text" x="50%" y="50%">
                     {{ eventDateUS  }} @ {{ eventTimeEST }}
                 </text>
             </svg> #}
-            
-        </div>
-        <div class="hero-illustration laptop:width-half">
-            {# <img src="/images/hero-header@1.5x.png" alt="" /> #}
-        </div>
-    </header>
-</main>
 
+    </div>
+    <div class="hero-illustration laptop:width-half">
+      {# <img src="/images/hero-header@1.5x.png" alt="" /> #}
+    </div>
+  </header>
+</main>
 
 <div class="main inner box-flex pt-400 pb-900">
 
-<div style="padding:56.25% 0 0 0;position:relative;">
+  <div style="padding:56.25% 0 0 0;position:relative;">
     <iframe src="{{vimeoEmbedLink}}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Roadie&amp;#039;s Multi-Tenant Backstage Architecture"></iframe>
-</div>
-<script src="https://player.vimeo.com/api/player.js"></script>
+  </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
 
 </div>
 
 <div class="inner box-flex pt-800 pb-1000 mb-1000">
-    <div class="laptop:width-half">
-        <h3 class="green-banner">
-            <a href="/talk" class="color-secondary">Don't miss our next show!</a>
-        </h3>
-        <div class="pr-500 pl-500">
-            <p class="mt-500">
-                Besides the talks, one third of the time in the event is about community discussions. We'd love to hear from you in real-time!
-            </p>
-            <br />
-            <a href="/rsvp" target="_blank" class="button-with-pointer">
-                <span class="button">
-                    See you there
-                </span>
-                <img src="/images/button-pointer.png" alt="" />
-            </a>
-        </div>
+  <div class="laptop:width-half">
+    <h3 class="green-banner">
+      <a href="/talk" class="color-secondary">Don't miss our next show!</a>
+    </h3>
+    <div class="pr-500 pl-500">
+      <p class="mt-500">
+        Besides the talks, one third of the time in the event is about community discussions. We'd love to hear from you in real-time!
+      </p>
+      <br/>
+      <a href="/rsvp" target="_blank" class="button-with-pointer">
+        <span class="button">
+          See you there
+        </span>
+        <img src="/images/button-pointer.png" alt=""/>
+      </a>
     </div>
-    <div class="laptop:width-half">
-        <h3 class="green-banner">
-            <a href="/talk" class="color-secondary">Propose a talk</a>
-        </h3>
-        <div class="pr-500 pl-500">
-            <p class="mt-500">
-                We want to create a space where everyone shares their experiences and ideas with Backstage, so we can all grow together. <a href="/talk" target="_blank" rel="noopener nofollow">What do you want to talk about?</a> 
-            </p>
-        </div>
+  </div>
+  <div class="laptop:width-half">
+    <h3 class="green-banner">
+      <a href="/talk" class="color-secondary">Propose a talk</a>
+    </h3>
+    <div class="pr-500 pl-500">
+      <p class="mt-500">
+        We want to create a space where everyone shares their experiences and ideas with Backstage, so we can all grow together.
+        <a href="/talk" target="_blank" rel="noopener nofollow">What do you want to talk about?</a>
+      </p>
     </div>
+  </div>
 </div>
