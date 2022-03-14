@@ -20,23 +20,26 @@ layout: base
 </main>
 
 <div class="main inner box-flex pt-300 pb-300">
-  <h3 class="mb-400">
+  <h2 class="mb-500">
     Other recordings
     <img src="/images/decor-eye.png" alt="" class="inline-img-decor"/>
-  </h3>
-  <ul class="laptop:box-flex">
+  </h2>
+  <ul class="laptop:box-flex mt-600 flex-wrap">
     {% for recording in otherTalks %}
-      <li class="laptop:width-third pr-500">
+      <li class="laptop:width-half pr-600 mt-500 mb-500">
         <h3 class="mb-500 recording-listing">
-          <a href="{{recording.url}}">
+          <a href="{{recording.url}}" class="color-white">
             {{recording.data.title}}
-            Other talk
           </a>
         </h3>
         <p>
           {{recording.data.description}}
         </p>
+        <a href="{{ talk.url }}" class="button button__secondary mt-500" title="Watch {{ recording.data.title }}">
+          Watch Talk
+        </a>
       </li>
     {% endfor %}
   </ul>
+  <span class="gradient-line mt-1000 mb-800"></span>
 </div>
