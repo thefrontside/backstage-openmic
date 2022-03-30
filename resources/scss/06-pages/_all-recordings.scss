@@ -1,0 +1,53 @@
+@import "../05-components/";
+
+.shows-list {
+    padding: 0;
+    list-style: none;
+}
+
+.talk-item__all-talks {
+    @extend .talks-item;
+    align-items: stretch;
+    padding: 0;
+    margin-top: get-size('600');
+
+    &:nth-child(odd) {
+        padding-right: get-size('500');
+    }
+    &:nth-child(even) {
+        padding-left: get-size('500');
+    }
+
+    .talk-box {
+        padding: get-size('600') get-size('600');
+        font-size: v(text-500);
+
+        h3 {
+            font-size: v(text-600);
+        }
+
+        strong a {
+            border: none;
+        }
+
+        @include media-query('laptop') {
+            padding: get-size('600') get-size('600');
+        }
+
+        &--text {
+            @include media-query('laptop') {
+                padding-left: get-size('600');
+            }
+        }
+    }
+    .speaker-avatar__talk {
+        width: 90px;
+    
+        .speaker-avatar--speaker-pic {
+            width: 90px;
+        }
+        .speaker-avatar--company-icon {
+            display: none;
+        }
+    }
+}

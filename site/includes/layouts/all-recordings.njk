@@ -1,0 +1,42 @@
+---
+layout: base
+pagination:
+  data: collections.show
+  size: 5
+  alias: shows
+---
+
+<main id="main" class="main inner box-flex pt-1000 pb-300" tabindex="-1">
+  <header class="hero page-header laptop:box-flex">
+    <div class="laptop:width-half">
+      <h1 class="hero--title">
+        {{ title }}
+      </h1>
+      <p class="hero--description">{{ meta_description }}</p>
+
+      <span class="gradient-line mt-1000 mb-800"></span>
+    </div>
+    <div class="hero-illustration laptop:width-half">
+    </div>
+  </header>
+  <ol class="shows-list">
+    {% for show in shows %}
+      <li class="mt-1000 mb-800">
+        <div class="mb-500 pr-500">
+          <h3 class="mb-500">
+            <a href="{{show.url}}">{{show.data.title}}</a>
+          </h3>
+          <p>{{show.data.meta_description}}</p>
+        </div>
+        <ul class="laptop:box-flex flex-wrap mt-500 pr-800 pl-800">
+          {% for talk in show.data.talks %}
+            <li class="talk-item__all-talks laptop:box-flex laptop:width-half">
+              {% include "components/talk-card.njk" %}
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ol>
+</main>
+

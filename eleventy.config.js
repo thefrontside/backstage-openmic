@@ -45,12 +45,21 @@ module.exports = config => {
 
   config.addCollection('recording', collection => {
     let talks = collection.getFilteredByTag('talk');
+    const shows = collection.getFilteredByTag('show');
 
     talks.forEach((talk) => {
-      const otherTalks = talks.filter((thisTalk) => {
-        return thisTalk.data.title != talk.data.title;
-      });
-      talk.data.otherTalks = otherTalks;
+      const otherTalks = talks
+        .filter((thisTalk) => {
+          return thisTalk.data.title != talk.data.title;
+        })
+        .map(value => ({ value, sort: Math.random() })) // Shuffle talks
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+      const show = shows.filter((thisShow) => {
+        return thisShow.data.showkey === talk.data.showkey;
+      })
+      talk.data.otherTalks = otherTalks.slice(0,4);
+      talk.data.show = show[0];
     });
 
     return talks;
@@ -81,6 +90,7 @@ module.exports = config => {
   config.addLayoutAlias('page', 'layouts/page.njk')
   config.addLayoutAlias('past-show', 'layouts/past-show.njk')
   config.addLayoutAlias('recording', 'layouts/recording.njk')
+  config.addLayoutAlias('all-recordings', 'layouts/all-recordings.njk')
   // config.addLayoutAlias('blog', 'layouts/blog.njk')
   // config.addLayoutAlias('post', 'layouts/post.njk')
   // config.addLayoutAlias('contact', 'layouts/contact.njk')
