@@ -1,9 +1,9 @@
 .talk-box {
-    $border-radius: 40px;
+    --box-radius: 40px;
     position: relative;
     background: get-color('primary');
     padding: get-size('800') get-size('800');
-    border-radius: $border-radius;
+    border-radius: var(--box-radius);
     align-items: flex-start;
 
     @include media-query('laptop') {
@@ -27,6 +27,6 @@
         right: -1px;
         bottom: -1px;
         z-index: -1;
-        border-radius: $border-radius + 1px;
+        border-radius: calc(var(--box-radius) + 1px);
     }
 }

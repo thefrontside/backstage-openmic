@@ -52,6 +52,9 @@ module.exports = config => {
         .filter((thisTalk) => {
           return thisTalk.data.title != talk.data.title;
         })
+        .filter((thisTalk) => {
+          return !!thisTalk.data.vimeoEmbedLink
+        })
         .map(value => ({ value, sort: Math.random() })) // Shuffle talks
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value);
@@ -63,26 +66,7 @@ module.exports = config => {
     });
 
     return talks;
-  })
-
-  // // Categories collection
-  // config.addCollection('categories', collection => {
-
-  //     const list = new Set()
-
-  //     collection.getAll().forEach(item => {
-
-  //         if (!item.data.tags) return
-
-  //         item.data.tags
-  //             .filter(category => !['blog', 'all'].includes(category))
-  //             .forEach(category => list.add(category))
-
-  //     })
-
-  //     return Array.from(list).sort()
-
-  // })
+  });
 
   // Layout aliases
   config.addLayoutAlias('base', 'layouts/base.njk')
@@ -91,10 +75,7 @@ module.exports = config => {
   config.addLayoutAlias('past-show', 'layouts/past-show.njk')
   config.addLayoutAlias('recording', 'layouts/recording.njk')
   config.addLayoutAlias('all-recordings', 'layouts/all-recordings.njk')
-  // config.addLayoutAlias('blog', 'layouts/blog.njk')
-  // config.addLayoutAlias('post', 'layouts/post.njk')
-  // config.addLayoutAlias('contact', 'layouts/contact.njk')
-  // config.addLayoutAlias('category', 'layouts/category.njk')
+
 
   // Include our static assets
   config.addPassthroughCopy('css')

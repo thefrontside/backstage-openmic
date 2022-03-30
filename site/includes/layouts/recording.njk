@@ -29,22 +29,11 @@ layout: base
     Other recordings
     <img src="/images/decor-eye.png" alt="" class="inline-img-decor"/>
   </h2>
-  <ul class="laptop:box-flex mt-600 flex-wrap">
-    {% for recording in otherTalks %}
-      <li class="laptop:width-half pr-600 mt-500 mb-500">
-        <h3 class="mb-500 recording-listing">
-          <a href="{{recording.url}}" class="color-white">
-            {{recording.data.title}}
-          </a>
-        </h3>
-        <p>
-          {{recording.data.description}}
-        </p>
-        <a href="{{ talk.url }}" class="button button__secondary mt-500" title="Watch {{ recording.data.title }}">
-          Watch Talk
-        </a>
+  <ul class="laptop:box-flex flex-wrap mt-500 pr-800 pl-800">
+    {% for talk in otherTalks %}
+      <li class="talk-item__all-talks laptop:box-flex laptop:width-half">
+        {% include "components/talk-card.njk" %}
       </li>
     {% endfor %}
   </ul>
-  <span class="gradient-line mt-1000 mb-800"></span>
 </div>

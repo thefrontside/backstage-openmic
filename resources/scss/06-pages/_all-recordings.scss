@@ -21,6 +21,8 @@
     .talk-box {
         padding: get-size('600') get-size('600');
         font-size: v(text-500);
+        $border-radius: 20px;
+        --box-radius: 20px;
 
         h3 {
             font-size: v(text-600);
