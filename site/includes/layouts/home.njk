@@ -2,256 +2,254 @@
 layout: base
 pagination:
   data: collections.show
-  size: 2
+  size: 5
   alias: shows
 ---
 
 <main id="main" class="main inner box-flex pt-1000 pb-1000" tabindex="-1">
-    <header class="hero page-header laptop:box-flex">
-        <div class="laptop:width-half">
-            <h1 class="hero--title">
-                A community of people building <img src="/images/portal-icon.png" alt="" class="inline-img-decor" /> developer portals
-            </h1>
-            <p class="hero--description">{{ sub_heading }}</p>
+  <header class="hero page-header laptop:box-flex">
+    <div class="laptop:width-half">
+      <h1 class="hero--title">
+        A community of people building
+        <img src="/images/portal-icon.png" alt="" class="inline-img-decor"/>
+        developer portals
+      </h1>
+      <p class="hero--description">{{ sub_heading }}</p>
 
-            {% if not callForSpeakers %}
-                <span class="gradient-line mt-1000 mb-800"></span>
-                <h3 class="mb-500">Featuring <img src="/images/decor-eye.png" alt="" class="inline-img-decor" /></h3>
-                <div class="tablet:box-flex">
-                    <div class="featured-speaker tablet:width-half mb-500">
-                        <div class="speaker-avatar">
-                            <img src="{{speakerOne.image}}" alt="{{ speakerOne.name }} portrait" class="speaker-avatar--speaker-pic" />
-                            {% if speakerOne.companyLogo %}
-                            <img src="{{speakerOne.companyLogo}}" alt="{{ speakerOne.company }} logo" class="speaker-avatar--company-icon" />
-                            {% endif %}
-                        </div>
-                        <div>
-                            <strong class="featured-speaker--name">
-                                {{ speakerOne.name }}
-                            </strong>
-                            <em class="featuring-speaker--role">
-                                {{ speakerOne.title }} {{"of" if speakerOne.isLibrary else "at" }} {{ speakerOne.company }}
-                            </em>
-                        </div>
-                    </div>
-                    <div class="featured-speaker tablet:width-half mb-500">
-                        <div class="speaker-avatar">
-                            <img src="{{speakerTwo.image}}" alt="{{ speakerTwo.name }} portrait" class="speaker-avatar--speaker-pic" />
-                            <img src="{{speakerTwo.companyLogo}}" alt="{{ speakerTwo.company }} logo" class="speaker-avatar--company-icon" />
-                        </div>
-                        <div>
-                            <strong class="featured-speaker--name">
-                                {{ speakerTwo.name }}
-                            </strong>
-                            <em class="featuring-speaker--role">
-                                {{ speakerTwo.title }} at {{ speakerTwo.company }}
-                            </em>
-                        </div>
-                    </div>
-                </div>
-            {% else %}
-                <span class="gradient-line mt-1000 mb-800"></span>
-                <h3 class="mb-500">
-                    Get event invites and tips
-                    <img src="/images/decor-eye.png" alt="" class="inline-img-decor" />
-                </h3>
-                <a href="/join" target="_blank" class="button">
-                    Join our community
-                </a>
-                <p class="mt-500">We won't spam you, nor share your info 🤞🏽</p>
-            {% endif %}
+      {% if not callForSpeakers %}
+        <span class="gradient-line mt-1000 mb-800"></span>
+        <h3 class="mb-500">Featuring
+          <img src="/images/decor-eye.png" alt="" class="inline-img-decor"/></h3>
+        <div class="tablet:box-flex">
+          <div class="featured-speaker tablet:width-half mb-500">
+            <div class="speaker-avatar">
+              <img src="{{speakerone.image}}" alt="{{ speakerone.name }} portrait" class="speaker-avatar--speaker-pic"/>
+              {% if speakerOne.companyLogo %}
+                <img src="{{speakerOne.companyLogo}}" alt="{{ speakerOne.company }} logo" class="speaker-avatar--company-icon"/>
+              {% endif %}
+            </div>
+            <div>
+              <strong class="featured-speaker--name">
+                {{ speakerOne.name }}
+              </strong>
+              <em class="featuring-speaker--role">
+                {{ speakerOne.title }}
+                {{"of" if speakerOne.isLibrary else "at" }}
+                {{ speakerOne.company }}
+              </em>
+            </div>
+          </div>
+          <div class="featured-speaker tablet:width-half mb-500">
+            <div class="speaker-avatar">
+              <img src="{{speakertwo.image}}" alt="{{ speakertwo.name }} portrait" class="speaker-avatar--speaker-pic"/>
+              <img src="{{speakertwo.companylogo}}" alt="{{ speakertwo.company }} logo" class="speaker-avatar--company-icon"/>
+            </div>
+            <div>
+              <strong class="featured-speaker--name">
+                {{ speakerTwo.name }}
+              </strong>
+              <em class="featuring-speaker--role">
+                {{ speakerTwo.title }}
+                at
+                {{ speakerTwo.company }}
+              </em>
+            </div>
+          </div>
         </div>
-        <div class="hero-illustration laptop:width-half">
-            <img src="/images/hero-header@1.5x.png" alt="" />
-        </div>
-    </header>
+      {% else %}
+        <span class="gradient-line mt-1000 mb-800"></span>
+        <h3 class="mb-500">
+          Get event invites and tips
+          <img src="/images/decor-eye.png" alt="" class="inline-img-decor"/>
+        </h3>
+        <a href="/join" target="_blank" class="button">
+          Join our community
+        </a>
+        <p class="mt-500">We won't spam you, nor share your info 🤞🏽</p>
+      {% endif %}
+    </div>
+    <div class="hero-illustration laptop:width-half">
+      <img src="/images/hero-header@1.5x.png" alt=""/>
+    </div>
+  </header>
 </main>
 
-
 <div class="home-nextshow-banner mb-1000">
-    {% include "components/nextshow-banner.njk" %}
+  {% include "components/nextshow-banner.njk" %}
 </div>
 
-
-
 <div class="main inner box-flex pt-800 pb-800">
-    <div class="agenda-header laptop:box-flex">
-        <h2 class="agenda-title green-banner" id="agenda">
-            <a href="#agenda" class="color-secondary">
-                March 3rd &mdash; 12pm ET / 18h CET                
-                {# <a href="https://www.twitch.tv/frontsidesoftware/schedule" target="_blank" rel="noopener noreferrer">Twitch</a> #}
-            </a>
-        </h2>
-        <div class="hosted-by mt-800">
-            <span class="hosted-by--title"><span>Hosted by</span></span>
-            <span class="hosted-by--name"><span>Frontside Software <br /> &amp; Roadie.io</span></span>
-            {# <span class="hosted-by--role"><span>and friends</span></span> #}
+  <div class="agenda-header laptop:box-flex">
+    <h2 class="agenda-title green-banner" id="agenda">
+      <a href="#agenda" class="color-secondary">
+        Last event: March 3rd &mdash; 12pm ET / 18h CET
+        {# <a href="https://www.twitch.tv/frontsidesoftware/schedule" target="_blank" rel="noopener noreferrer">Twitch</a> #}
+      </a>
+    </h2>
+    <div class="hosted-by mt-800">
+      <span class="hosted-by--title"><span>Hosted by</span></span>
+      <span class="hosted-by--name"><span>Frontside Software
+          <br/>
+          &amp; Roadie.io</span></span>
+      {# <span class="hosted-by--role"><span>and friends</span></span> #}
+    </div>
+  </div>
+  <ol class="talks-list">
+    {% if not callForSpeakers %}
+      <li class="talks-item laptop:box-flex">
+        <div class="talk-time">
+          <span class="talk-time--time green-banner">
+            {{speakerOne.talkTime}}
+          </span>
         </div>
-    </div>
-    <ol class="talks-list">
-        {% if not callForSpeakers %}
-            <li class="talks-item laptop:box-flex">
-                <div class="talk-time">
-                    <span class="talk-time--time green-banner">
-                        {{speakerOne.talkTime}}
-                    </span>
-                </div>
-                <div class="talk-box laptop:box-flex align-center">
-                    <div class="speaker-avatar speaker-avatar__talk">
-                        <img src="{{speakerOne.image}}" alt="{{ speakerOne.name }} portrait" class="speaker-avatar--speaker-pic" />
-                            <img src="{{speakerOne.companyLogo}}" alt="{{ speakerOne.company }} logo" class="speaker-avatar--company-icon" />
-                    </div>
-                    <div class="talk-box--text">
-                        <h3 class="mb-300">
-                            {{speakerOne.talkTitle}}
-                        </h3>
-                        <strong>
-                            {{ speakerOne.name }}, {{ speakerOne.title }}
-                            {{"of" if speakerOne.isLibrary else "at" }}
-                            <a href="{{ speakerOne.companyLink }}" target="_blank" rel="noopener">{{ speakerOne.company }}</a>
-                        </strong>
-                        <p class="mt-600 mb-500">
-                            {{speakerOne.talkDescription}}
-                        </p>
-                        {% if speakerOne.learnMore %}
-                            <p class="text-400">
-                                <a href="{{ speakerOne.learnMore }}"  target="_blank" rel="noopener nofollow">
-                                    Learn more on Github
-                                </a>
-                            </p>
-                        {% endif %}
-                    </div>
-                </div>
-            </li>
-            <li class="talks-item laptop:box-flex">
-                <div class="talk-time">
-                    <span class="talk-time--time green-banner">
-                        {{speakerTwo.talkTime}}
-                    </span>
-                </div>
-                <div class="talk-box laptop:box-flex align-center">
-                    <div class="speaker-avatar speaker-avatar__talk">
-                        <img src="{{speakerTwo.image}}" alt="{{ speakerTwo.name }} portrait" class="speaker-avatar--speaker-pic" />
-                            <img src="{{speakerTwo.companyLogo}}" alt="{{ speakerTwo.company }} logo" class="speaker-avatar--company-icon" />
-                    </div>
-                    <div class="talk-box--text">
-                        <h3 class="mb-300">
-                            {{speakerTwo.talkTitle}}
-                        </h3>
-                        <strong>
-                            {{ speakerTwo.name }}, {{ speakerTwo.title }}
-                            at <a href="{{ speakerTwo.companyLink }}" target="_blank" rel="noopener">{{ speakerTwo.company }}</a>
-                        </strong>
-                        <p class="mt-600 mb-500">
-                            {{speakerTwo.talkDescription}}
-                        </p>
-                        {% if speakerOne.learnMore %}
-                            <p class="text-400">
-                                <a href="{{ speakerTwo.learnMore }}" target="_blank" rel="noopener nofollow">
-                                    Learn more on Github
-                                </a>
-                            </p>
-                        {% endif %}
-                    </div>
-                </div>
-            </li>
-        {% else %}
-            <li class="talks-item laptop:box-flex">
-                <div class="talk-time">
-                    <span class="talk-time--time green-banner">
-                        {{speakerOne.talkTime}}
-                    </span>
-                </div>
-                <div class="talk-box laptop:box-flex align-center">
-                    <div class="speaker-avatar speaker-avatar__talk">
-                        <img src="/images/block-decor.png" alt="" />
-                    </div>
-                    <div class="talk-box--text">
-                        <h3 class="mb-300">
-                            Backstage Users Unconference
-                        </h3>
-                        <p class="mt-600 mb-500">
-                            Backstage is rapidly evolving at the platform level, expanding to new adopters, and growing within our organizations. In this unconference, we'll lay the solutions and challenges everyone is experiencing to discover new ideas and opportunities in small groups.
-                        </p>
-                        <p>
-                            
-                            <a href="/rsvp" target="_blank" class="button-with-pointer">
-                                <span class="button">
-                                    RSVP
-                                </span>
-                                <img src="/images/button-pointer.png" alt="" />
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </li>
-        {% endif %}
-    </ol>
-    <div class="join-us">
-        <p>
-            Events, tips, and networking! <a href="/join" target="_blank">Join Open Mic!</a>
-        </p>
-    </div>
+        <div class="talk-box laptop:box-flex align-center">
+          <div class="speaker-avatar speaker-avatar__talk">
+            <img src="{{speakerone.image}}" alt="{{ speakerone.name }} portrait" class="speaker-avatar--speaker-pic"/>
+            <img src="{{speakerone.companylogo}}" alt="{{ speakerone.company }} logo" class="speaker-avatar--company-icon"/>
+          </div>
+          <div class="talk-box--text">
+            <h3 class="mb-300">
+              {{speakerOne.talkTitle}}
+            </h3>
+            <strong>
+              {{ speakerOne.name }},
+              {{ speakerOne.title }}
+              {{"of" if speakerOne.isLibrary else "at" }}
+              <a href="{{ speakerOne.companyLink }}" target="_blank" rel="noopener">{{ speakerOne.company }}</a>
+            </strong>
+            <p class="mt-600 mb-500">
+              {{speakerOne.talkDescription}}
+            </p>
+            {% if speakerOne.learnMore %}
+              <p class="text-400">
+                <a href="{{ speakerone.learnmore }}"  target="_blank" rel="noopener nofollow">
+                  Learn more on Github
+                </a>
+              </p>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+      <li class="talks-item laptop:box-flex">
+        <div class="talk-time">
+          <span class="talk-time--time green-banner">
+            {{speakerTwo.talkTime}}
+          </span>
+        </div>
+        <div class="talk-box laptop:box-flex align-center">
+          <div class="speaker-avatar speaker-avatar__talk">
+            <img src="{{speakertwo.image}}" alt="{{ speakertwo.name }} portrait" class="speaker-avatar--speaker-pic"/>
+            <img src="{{speakertwo.companylogo}}" alt="{{ speakertwo.company }} logo" class="speaker-avatar--company-icon"/>
+          </div>
+          <div class="talk-box--text">
+            <h3 class="mb-300">
+              {{speakerTwo.talkTitle}}
+            </h3>
+            <strong>
+              {{ speakerTwo.name }},
+              {{ speakerTwo.title }}
+              at
+              <a href="{{ speakertwo.companylink }}" target="_blank" rel="noopener">{{ speakerTwo.company }}</a>
+            </strong>
+            <p class="mt-600 mb-500">
+              {{speakerTwo.talkDescription}}
+            </p>
+            {% if speakerOne.learnMore %}
+              <p class="text-400">
+                <a href="{{ speakertwo.learnmore }}" target="_blank" rel="noopener nofollow">
+                  Learn more on Github
+                </a>
+              </p>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+    {% else %}
+      <li class="talks-item laptop:box-flex">
+        <div class="talk-time">
+          <span class="talk-time--time green-banner">
+            {{speakerOne.talkTime}}
+          </span>
+        </div>
+        <div class="talk-box laptop:box-flex align-center">
+          <div class="speaker-avatar speaker-avatar__talk">
+            <img src="/images/block-decor.png" alt=""/>
+          </div>
+          <div class="talk-box--text">
+            <h3 class="mb-300">
+              Backstage Users Unconference
+            </h3>
+            <p class="mt-600">
+              Backstage is rapidly evolving at the platform level, expanding to new adopters, and growing within our organizations.
+            </p>
+            <p class="mt-300 mb-500">
+              Attendees shared their experiences around eight topics, from testing and updating Backstage to system graphing best practices and collaboration across teams.
+            </p>
+            <p>
+              <a href="/show/2022-03-unconference/" class="button-with-pointer">
+                <span class="button">
+                  View Recordings
+                </span>
+                <img src="/images/button-pointer.png" alt=""/>
+              </a>
+            </p>
+          </div>
+        </div>
+      </li>
+    {% endif %}
+  </ol>
+  <div class="join-us">
+    <p>
+      Events, tips, and networking!
+      <a href="/join" target="_blank">Join Open Mic!</a>
+    </p>
+  </div>
 </div>
 
 <div class="home-nextshow-banner mt-1000 mb-1000">
-    {% include "components/nextshow-banner.njk" %}
+  {% include "components/nextshow-banner.njk" %}
 </div>
 
 <div class="main inner box-flex pt-800 pb-800">
-    <div class="agenda-header laptop:box-flex">
-        <h2 class="agenda-title green-banner" id="past-shows">
-            <a href="#past-shows" class="color-secondary">
-                Past shows &amp; recordings
-            </a>
-        </h2>
-    </div>
-    <ol>
-        {% for show in shows %}
-            <li class="laptop:box-flex mt-1000 mb-800">
-                <div class="laptop:width-half mb-500 pr-500">
-                    <h3 class="mb-500">
-                        <a href="{{show.url}}">{{show.data.title}}</a>
-                    </h3>
-                    <p>{{show.data.meta_description}}</p>
-                </div>
-                <div class="laptop:width-half mt-500 pr-800 pl-800">
-                    {% for talk in show.data.talks %}
-                        <div class="featured-speaker box-flex mb-500">
-                            <div class="speaker-avatar">
-                                <img src="{{talk.data.speaker.image}}" alt="{{ talk.data.speaker.name }} portrait" class="speaker-avatar--speaker-pic" />
-                                {%if talk.data.speaker.companyLogo %}
-                                    <img src="{{talk.data.speaker.companyLogo}}" alt="{{ talk.data.speaker.company }} logo" class="speaker-avatar--company-icon" />
-                                {% endif %}
-                            </div>
-                            <div>
-                                <strong class="featured-speaker--name">
-                                    {{ talk.data.speaker.name }}
-                                </strong>
-                                <em class="featuring-speaker--role">
-                                    {{ talk.data.speaker.title }}
-                                    {{"of" if talk.data.speaker.isLibrary else "at" }}
-                                    {{ talk.data.speaker.company }}
-                                </em>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </li>
-        {% endfor %}
-    </ol>
-</div>
-
-<div class="main inner box-flex pt-800 pb-800 mb-1000">
-    <div class="laptop:width-half">
-        <h3 class="green-banner">
-            <a href="/talk" class="color-secondary">Propose a talk</a>
-        </h3>
-        <div class="pr-500 pl-500">
-            <p class="mt-500">
-                We want to create a space where everyone shares their experiences and ideas with Backstage, so we can all grow together. <a href="/talk" target="_blank" rel="noopener nofollow"><strong>What do you want to talk about?</strong></a> 
-            </p>
+  <div class="agenda-header laptop:box-flex">
+    <h2 class="agenda-title green-banner" id="past-shows">
+      <a href="/recordings" class="color-secondary">
+        Past shows &amp; recordings
+      </a>
+    </h2>
+  </div>
+  <ol>
+    {% for show in shows %}
+      <li class="laptop:box-flex mt-1000 mb-800">
+        <div class="laptop:width-half mb-500 pr-500">
+          <h3 class="mb-500">
+            <a href="{{show.url}}">{{show.data.title}}</a>
+          </h3>
+          <p>{{show.data.meta_description}}</p>
         </div>
-    </div>
+        <div class="laptop:width-half mt-500 pr-800 pl-800">
+          {% for talk in show.data.talks %}
+            <div class="featured-speaker box-flex mb-500">
+              <div class="speaker-avatar">
+                <img src="{{talk.data.speaker.image}}" alt="{{ talk.data.speaker.name }} portrait" class="speaker-avatar--speaker-pic"/>
+                {%if talk.data.speaker.companyLogo %}
+                  <img src="{{talk.data.speaker.companyLogo}}" alt="{{ talk.data.speaker.company }} logo" class="speaker-avatar--company-icon"/>
+                {% endif %}
+              </div>
+              <div>
+                <strong class="featured-speaker--name">
+                  {{ talk.data.speaker.name }}
+                </strong>
+                <em class="featuring-speaker--role">
+                  {{ talk.data.speaker.title }}
+                  {{"of" if talk.data.speaker.isLibrary else "at" }}
+                  {{ talk.data.speaker.company }}
+                </em>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
 </div>
-

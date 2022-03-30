@@ -1,31 +1,31 @@
-<nav id="mobile-nav" class="mobile-nav width-full height-screen box-flex bg-primary pl-700 pr-700 pt-800 z-20 mobileXL:box-hidden" aria-label="Mobile">
+<nav id="mobile-nav" class="mobile-nav width-full height-screen box-flex bg-primary pl-700 pr-700 pt-800 z-20 mobilexl:box-hidden" aria-label="mobile">
 
-    {% set navigation = collections.all | eleventyNavigation %}
+  {% set navigation = collections.all | eleventyNavigation %}
 
-    <ul class="width-full">
+  <ul class="width-full">
 
-        {%- for item in navigation %}
+    {%- for item in navigation %}
 
-        <li class="item">
+      <li class="item">
 
-            <a href="{{ item.url | url }}" class="link box-block color-white text-600 {{ 'active' if item.url === page.url }}" {{ 'aria-current=page' if item.url === page.url }}>{{ item.title }}</a>
+        <a href="{{ item.url | url }}" class="link box-block color-white text-600 {{ 'active' if item.url === page.url }}" {{ 'aria-current=page' if item.url === page.url }}>{{ item.title }}</a>
 
-        </li>
+      </li>
 
-        {%- endfor %}
+    {%- endfor %}
 
-    </ul>
+  </ul>
 
 </nav>
 
-<a href="/join" target="_blank" class="mobile-nav-toggle box-flex width-full bg-secondary z-20 mobileXL:box-hidden" aria-label="Mobile Navigation Toggle" aria-expanded="false" aria-controls="mobile-nav">
+<a href="/join" target="_blank" class="mobile-nav-toggle box-flex width-full bg-secondary z-20 mobilexl:box-hidden" aria-label="mobile navigation toggle" aria-expanded="false" aria-controls="mobile-nav">
 
-    <span class="mobile-nav-label text-400 color-primary">
-        Next show: {{ eventDateUS  }}
-    </span>
-    <span class="nav-link-rsvp color-primary weight-bold text-400 ml-300">
-        Join us
-    </span>
+  <span class="mobile-nav-label text-400 color-primary">
+    Next show:
+    {{ eventDateUS  }}
+  </span>
+  <span class="nav-link-rsvp color-primary weight-bold text-400 ml-300">
+    Join us
+  </span>
 
 </a>
-

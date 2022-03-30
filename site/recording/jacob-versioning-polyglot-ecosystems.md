@@ -4,6 +4,7 @@ showkey: '2021-05-05'
 title: Automatic Versioning in Polyglot Ecosystems
 description: In this talk, Jacob walked us through versioning models and caveats to consider when releasing packages and services when you use different languages to write them. 
 vimeoLink: https://vimeo.com/630870742
+vimeoEmbedLink: https://player.vimeo.com/video/630870742?h=9eb5f79e74&amp;badge=0&amp;autoplay=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479
 speaker:
   name: Jacob Bolda
   title: Author

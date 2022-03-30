@@ -1,0 +1,39 @@
+
+  <div class="talk-box laptop:box-flex align-center">
+    <div class="speaker-avatar speaker-avatar__talk">
+      <img src="{{talk.data.speaker.image}}" alt="{{ talk.data.speaker.name }} portrait" class="speaker-avatar--speaker-pic"/>
+      {%if talk.data.speaker.companyLogo %}
+        <img src="{{talk.data.speaker.companyLogo}}" alt="{{ talk.data.speaker.company }} logo" class="speaker-avatar--company-icon"/>
+      {% endif %}
+    </div>
+    <div class="talk-box--text">
+      <h3 class="mb-300">
+        {% if talk.data.vimeoEmbedLink %}
+          <a href="{{talk.url}}" class="color-white">
+            {{talk.data.title}}
+          </a>
+        {% else %}
+          {{talk.data.title}}
+        {% endif %}
+      </h3>
+      <strong>
+        {{ talk.data.speaker.name }},
+        {{ talk.data.speaker.title }}
+        {{"of" if talk.data.speaker.isLibrary else "at" }}
+        <a href="{{ talk.data.speaker.companyLink }}" target="_blank" rel="noopener">{{ talk.data.speaker.company }}</a>
+      </strong>
+      <p class="mt-600 mb-500">
+        {{talk.data.description}}
+      </p>
+      {% if talk.data.vimeoEmbedLink %}
+        <a href="{{ talk.url }}" class="button button__secondary" title="Watch {{ talk.data.speaker.name }}'s Talk">
+          Watch Talk
+        </a>
+      {% else %}
+        <a class="button button__coming-soon" disabled title="Watch {{ talk.data.speaker.name }}'s Talk">
+          Recording coming soon
+        </a>
+      {% endif %}
+    </div>
+  </div>
+

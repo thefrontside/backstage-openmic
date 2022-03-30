@@ -10,6 +10,10 @@
     }
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 // page header
 .page-header {
     --gap: #{get-size('800')};
@@ -22,4 +26,3 @@
         --gap: #{get-size('900')};
     }
 }
-

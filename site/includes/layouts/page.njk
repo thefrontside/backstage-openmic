@@ -4,26 +4,26 @@ layout: base
 
 <main id="main" class="main inner box-flex pt-600 pb-1100" tabindex="-1">
 
-    <article id="container-centre" class="column centre">
+  <article id="container-centre" class="column centre">
 
-        <header class="page-header">
+    <header class="page-header">
 
-            <h1 class="page-title">{{ title }}</h1>
+      <h1 class="page-title">{{ title }}</h1>
 
-            {% if sub_heading %}
+      {% if sub_heading %}
 
-                <p class="sub-heading">{{ sub_heading }}</p>
+        <p class="sub-heading">{{ sub_heading }}</p>
 
-            {% endif %}
+      {% endif %}
 
-        </header>
+    </header>
 
-        <div class="content flow">
+    <div class="content flow">
 
-            {{ content | safe }}
+      {{ content | safe }}
 
-        </div>
+    </div>
 
-    </article>
+  </article>
 
 </main>
