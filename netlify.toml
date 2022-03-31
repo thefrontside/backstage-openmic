@@ -15,7 +15,6 @@
 [[redirects]]
   from = "/talk"
   to = "https://frontside-software.typeform.com/to/h4jmH8qH"
-
   
 [[redirects]]
   from = "/rsvp"
@@ -25,7 +24,10 @@
   from = "/join"
   to = "https://frontside-software.typeform.com/to/Hwa01bCH"
 
-
 [[redirects]]
   from = "/show"
-  to = "/#past-shows"
+  to = "/recordings"
+
+[[redirects]]
+  from = "/recording"
+  to = "/recordings"
